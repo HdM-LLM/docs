@@ -1,1 +1,1 @@
-Sitemap: https://HdM-LLM/docs/sitemap.xml
+Sitemap: https://HdM-LLM.github.io/docs/sitemap.xml
