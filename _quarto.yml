@@ -8,7 +8,7 @@ book:
   page-navigation: true
   title: "Documentation"
   description: "foo"
-  site-url: "https://HdM-LLM.io/docs"
+  site-url: "https://HdM-LLM.github.io/docs"
   repo-url: https://github.com/HdM-LLM/docs
   repo-actions: [edit, issue]
   open-graph: true
