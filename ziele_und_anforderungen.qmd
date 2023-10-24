@@ -1,0 +1,13 @@
+# Ziele & Anforderungen
+
+Die folgenden Ziele möchten wir mit der Entwicklung dieser App erreichen:
+
+- 
+- 
+- 
+
+Um diese Ziele erreichen zu können, benötigten wir die nachstehenden Androderungen:
+
+- 
+- 
+- 
