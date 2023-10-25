@@ -2,43 +2,64 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Documentation",
+    "title": "Dokumentation",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
+    "text": "Übersicht\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
   },
   {
     "objectID": "index.html#hinweise",
     "href": "index.html#hinweise",
-    "title": "Documentation",
+    "title": "Dokumentation",
     "section": "Hinweise",
     "text": "Hinweise\n\nMögliche Gliederung (Design Science Research)"
   },
   {
     "objectID": "index.html#styling",
     "href": "index.html#styling",
-    "title": "Documentation",
+    "title": "Dokumentation",
     "section": "Styling",
     "text": "Styling\n\nHTML Themes"
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  Introduction",
+    "objectID": "einleitung.html",
+    "href": "einleitung.html",
+    "title": "1  Einleitung",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "Motivation\nFragestellung und Ziele\nMethodische Vorgehensweise\nAufbau der Arbeit"
   },
   {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "2  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever."
+    "objectID": "grundlagen.html#grundlage-x",
+    "href": "grundlagen.html#grundlage-x",
+    "title": "2  Grundlagen",
+    "section": "2.1 Grundlage X",
+    "text": "2.1 Grundlage X"
   },
   {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
+    "objectID": "grundlagen.html#grundlage-y",
+    "href": "grundlagen.html#grundlage-y",
+    "title": "2  Grundlagen",
+    "section": "2.2 Grundlage Y",
+    "text": "2.2 Grundlage Y"
+  },
+  {
+    "objectID": "ziele_und_anforderungen.html",
+    "href": "ziele_und_anforderungen.html",
+    "title": "3  Ziele & Anforderungen",
     "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "Die folgenden Ziele möchten wir mit der Entwicklung dieser App erreichen:\n\n\n\n\n\nUm diese Ziele erreichen zu können, benötigten wir die nachstehenden Androderungen:"
+  },
+  {
+    "objectID": "design_und_entwicklung.html",
+    "href": "design_und_entwicklung.html",
+    "title": "4  Design & Entwicklung",
+    "section": "",
+    "text": "Unsere Architektur:"
+  },
+  {
+    "objectID": "evaluation.html",
+    "href": "evaluation.html",
+    "title": "5  Evaluation",
+    "section": "",
+    "text": "…"
   }
 ]
