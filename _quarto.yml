@@ -6,43 +6,41 @@ execute:
 
 book:
   page-navigation: true
-  title: "Documentation"
-  description: "foo"
+  title: "Dokumentation"
+  description: "AppName Dokumentation"
   site-url: "https://HdM-LLM.github.io/docs"
   repo-url: https://github.com/HdM-LLM/docs
-  repo-actions: [edit, issue]
+  repo-actions: [edit, issue, source]
   open-graph: true
   image: "/images/logo.png"
   favicon: "/images/logo.png"
-  search:
-    type: overlay
+  search: true
   page-footer:
     left: |
-      © Team 3, 2023
+      © Team 03, 2023
     center:
-      - text: "Home"
+      - text: "Übersicht"
         href: index.qmd
-      - text: "Intro"
-        href: intro.qmd
+      - text: "Einleitung"
+        href: einleitung.qmd
     right:
       - icon: person-circle
       - text: "Moodle"
-        href: https://moodle.hdm-stuttgart.de/login/index.php
+        # href: https://moodle.hdm-stuttgart.de/login/index.php # causes error
         aria-label: Moodle
-  #    background: "#325b74"
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
+    - einleitung.qmd
+    - grundlagen.qmd
+    - ziele_und_anforderungen.qmd
+    - design_und_entwicklung.qmd
+    - evaluation.qmd
+    - referenzen.qmd
 
 format:
   html:
     toc: true
-    theme:
-      light: [cosmo, style/style.scss]
-      dark: [cosmo, style/style.scss, style/dark.scss]
-    mainfont: "Atkinson Hyperlegible"
+    theme: sandstone
     code-copy: true
     code-overflow: wrap
 

@@ -2,21 +2,21 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Documentation",
+    "title": "Dokumentation",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
+    "text": "Übersicht\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
   },
   {
     "objectID": "index.html#hinweise",
     "href": "index.html#hinweise",
-    "title": "Documentation",
+    "title": "Dokumentation",
     "section": "Hinweise",
     "text": "Hinweise\n\nMögliche Gliederung (Design Science Research)"
   },
   {
     "objectID": "index.html#styling",
     "href": "index.html#styling",
-    "title": "Documentation",
+    "title": "Dokumentation",
     "section": "Styling",
     "text": "Styling\n\nHTML Themes"
   },
@@ -40,5 +40,131 @@
     "title": "References",
     "section": "",
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "intro.html#motivation",
+    "href": "intro.html#motivation",
+    "title": "1  Einleitung",
+    "section": "1.1 Motivation",
+    "text": "1.1 Motivation"
+  },
+  {
+    "objectID": "intro.html#fragestellung-und-ziele",
+    "href": "intro.html#fragestellung-und-ziele",
+    "title": "1  Einleitung",
+    "section": "1.2 Fragestellung und Ziele",
+    "text": "1.2 Fragestellung und Ziele"
+  },
+  {
+    "objectID": "intro.html#methodische-vorgehensweise",
+    "href": "intro.html#methodische-vorgehensweise",
+    "title": "1  Einleitung",
+    "section": "1.3 Methodische Vorgehensweise",
+    "text": "1.3 Methodische Vorgehensweise"
+  },
+  {
+    "objectID": "intro.html#aufbau-der-arbeit",
+    "href": "intro.html#aufbau-der-arbeit",
+    "title": "1  Einleitung",
+    "section": "1.4 Aufbau der Arbeit",
+    "text": "1.4 Aufbau der Arbeit"
+  },
+  {
+    "objectID": "ziele_und_anforderungen.html#die-folgenden-ziele-möchten-wir-mit-der-entwicklung-dieser-app-erreichen",
+    "href": "ziele_und_anforderungen.html#die-folgenden-ziele-möchten-wir-mit-der-entwicklung-dieser-app-erreichen",
+    "title": "3  Ziele und Anforderungen",
+    "section": "3.1 Die folgenden Ziele möchten wir mit der Entwicklung dieser App erreichen:",
+    "text": "3.1 Die folgenden Ziele möchten wir mit der Entwicklung dieser App erreichen:\n\n\n\nUm diese Ziele erreichen zu können, benötigten wir die nachstehenden Androderungen:"
+  },
+  {
+    "objectID": "ziele_und_anforderungen.html",
+    "href": "ziele_und_anforderungen.html",
+    "title": "3  Ziele & Anforderungen",
+    "section": "",
+    "text": "Die folgenden Ziele möchten wir mit der Entwicklung dieser App erreichen:\n\n\n\n\n\nUm diese Ziele erreichen zu können, benötigten wir die nachstehenden Androderungen:"
+  },
+  {
+    "objectID": "design_und_entwicklung.html",
+    "href": "design_und_entwicklung.html",
+    "title": "4  Design & Entwicklung",
+    "section": "",
+    "text": "Unsere Architektur:"
+  },
+  {
+    "objectID": "einleitung.html#motivation",
+    "href": "einleitung.html#motivation",
+    "title": "1  Einleitung",
+    "section": "1.1 Motivation",
+    "text": "1.1 Motivation"
+  },
+  {
+    "objectID": "einleitung.html#fragestellung-und-ziele",
+    "href": "einleitung.html#fragestellung-und-ziele",
+    "title": "1  Einleitung",
+    "section": "1.2 Fragestellung und Ziele",
+    "text": "1.2 Fragestellung und Ziele"
+  },
+  {
+    "objectID": "einleitung.html#methodische-vorgehensweise",
+    "href": "einleitung.html#methodische-vorgehensweise",
+    "title": "1  Einleitung",
+    "section": "1.3 Methodische Vorgehensweise",
+    "text": "1.3 Methodische Vorgehensweise"
+  },
+  {
+    "objectID": "einleitung.html#aufbau-der-arbeit",
+    "href": "einleitung.html#aufbau-der-arbeit",
+    "title": "1  Einleitung",
+    "section": "1.4 Aufbau der Arbeit",
+    "text": "1.4 Aufbau der Arbeit"
+  },
+  {
+    "objectID": "grundlagen.html",
+    "href": "grundlagen.html",
+    "title": "2  Grundlagen",
+    "section": "",
+    "text": "…"
+  },
+  {
+    "objectID": "evaluation.html",
+    "href": "evaluation.html",
+    "title": "5  Evaluation",
+    "section": "",
+    "text": "…"
+  },
+  {
+    "objectID": "einleitung.html",
+    "href": "einleitung.html",
+    "title": "1  Einleitung",
+    "section": "",
+    "text": "Motivation\nFragestellung und Ziele\nMethodische Vorgehensweise\nAufbau der Arbeit"
+  },
+  {
+    "objectID": "grundlagen.html#grundlage-1",
+    "href": "grundlagen.html#grundlage-1",
+    "title": "2  Grundlagen",
+    "section": "2.1 Grundlage 1",
+    "text": "2.1 Grundlage 1"
+  },
+  {
+    "objectID": "grundlagen.html#grundlage-2",
+    "href": "grundlagen.html#grundlage-2",
+    "title": "2  Grundlagen",
+    "section": "2.2 Grundlage 2",
+    "text": "2.2 Grundlage 2"
+  },
+  {
+    "objectID": "grundlagen.html#grundlage-x",
+    "href": "grundlagen.html#grundlage-x",
+    "title": "2  Grundlagen",
+    "section": "2.1 Grundlage X",
+    "text": "2.1 Grundlage X"
+  },
+  {
+    "objectID": "grundlagen.html#grundlage-y",
+    "href": "grundlagen.html#grundlage-y",
+    "title": "2  Grundlagen",
+    "section": "2.2 Grundlage Y",
+    "text": "2.2 Grundlage Y"
   }
 ]
