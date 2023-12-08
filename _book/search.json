@@ -79,9 +79,9 @@
   {
     "objectID": "ziele_und_anforderungen.html",
     "href": "ziele_und_anforderungen.html",
-    "title": "3  Ziele & Anforderungen",
+    "title": "3  Goal and Requirements",
     "section": "",
-    "text": "Die folgenden Ziele möchten wir mit der Entwicklung dieser App erreichen:\n\n\n\n\n\nUm diese Ziele erreichen zu können, benötigten wir die nachstehenden Androderungen:"
+    "text": "4 Use Cases"
   },
   {
     "objectID": "design_und_entwicklung.html",
@@ -166,5 +166,47 @@
     "title": "2  Grundlagen",
     "section": "2.2 Grundlage Y",
     "text": "2.2 Grundlage Y"
+  },
+  {
+    "objectID": "ziele_und_anforderungen.html#job-posting",
+    "href": "ziele_und_anforderungen.html#job-posting",
+    "title": "3  Goal and Requirements",
+    "section": "3.1 Job Posting",
+    "text": "3.1 Job Posting\nA job posting or vancancy is a description of a job opening. It contains information about the job, such as the job title, the job description, the job qualifications, the job type (full-time, part-time, etc.), the job category (e.g. IT, Marketing, etc.), the salary, the job requirements, aswell as the job benefits."
+  },
+  {
+    "objectID": "ziele_und_anforderungen.html#application",
+    "href": "ziele_und_anforderungen.html#application",
+    "title": "3  Goal and Requirements",
+    "section": "3.2 Application",
+    "text": "3.2 Application\nAn application is a document which generally consists of a cover letter, a resume, and other supporting materials. It is used by applicants to apply for a job posting."
+  },
+  {
+    "objectID": "ziele_und_anforderungen.html#applicant",
+    "href": "ziele_und_anforderungen.html#applicant",
+    "title": "3  Goal and Requirements",
+    "section": "3.3 Applicant",
+    "text": "3.3 Applicant\nAn applicant is a person who applies for a job posting. An applicant can have multiple applications to different job postings."
+  },
+  {
+    "objectID": "ziele_und_anforderungen.html#create-a-new-job-posting",
+    "href": "ziele_und_anforderungen.html#create-a-new-job-posting",
+    "title": "3  Goal and Requirements",
+    "section": "4.1 Create a new job posting",
+    "text": "4.1 Create a new job posting\nAn employee of the company should be able to create a new job posting. The job posting should contain the following information:\n\nJob title\nJob description\nJob qualifications\nJob type\ndepartment"
+  },
+  {
+    "objectID": "ziele_und_anforderungen.html#manage-applications",
+    "href": "ziele_und_anforderungen.html#manage-applications",
+    "title": "3  Goal and Requirements",
+    "section": "4.2 Manage applications",
+    "text": "4.2 Manage applications\nAn employee in HR of the company should be able to manage applications. This includes the following tasks:\n\nView applications\nDelete applications\nUpdate applications\nCreate applications\nFilter applications"
+  },
+  {
+    "objectID": "ziele_und_anforderungen.html#manage-applicants",
+    "href": "ziele_und_anforderungen.html#manage-applicants",
+    "title": "3  Goal and Requirements",
+    "section": "4.3 Manage applicants",
+    "text": "4.3 Manage applicants\nAn employee in HR of the company should be able to manage applicants. This includes the following tasks:\n\nView applicants\nDelete applicants\nUpdate applicants\nCreate applicants\nFilter applicants\nView applications of an applicant"
   }
 ]
