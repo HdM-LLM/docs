@@ -8,7 +8,7 @@
 
 <meta name="description" content="SkillSync Documentation">
 
-<title>SkillSync - References</title>
+<title>SkillSync - 4&nbsp; Design &amp; Development</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,26 +21,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -50,7 +31,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./evaluation.html" rel="prev">
+<link href="./evaluation.html" rel="next">
+<link href="./goals_and_requirements.html" rel="prev">
 <link href=".//images/logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -83,9 +65,12 @@ div.csl-indent {
 }</script>
 
 
-<meta property="og:title" content="SkillSync - References">
+<meta property="og:title" content="SkillSync - 4&nbsp; Design &amp; Development">
 <meta property="og:description" content="SkillSync Documentation">
+<meta property="og:image" content="https://HdM-LLM.github.io/docs/images/figma_dashboard.png">
 <meta property="og:site-name" content="SkillSync">
+<meta property="og:image:height" content="1840">
+<meta property="og:image:width" content="2834">
 </head>
 
 <body class="nav-sidebar floating">
@@ -97,7 +82,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./design_and_development.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Design &amp; Development</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -151,7 +136,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./design_and_development.html" class="sidebar-item-text sidebar-link">
+  <a href="./design_and_development.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Design &amp; Development</span></span></a>
   </div>
 </li>
@@ -163,7 +148,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -173,14 +158,29 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#frontend" id="toc-frontend" class="nav-link active" data-scroll-target="#frontend"><span class="header-section-number">4.1</span> Frontend</a>
+  <ul class="collapse">
+  <li><a href="#design" id="toc-design" class="nav-link" data-scroll-target="#design"><span class="header-section-number">4.1.1</span> Design</a></li>
+  <li><a href="#development" id="toc-development" class="nav-link" data-scroll-target="#development"><span class="header-section-number">4.1.2</span> Development</a></li>
+  </ul></li>
+  <li><a href="#backend" id="toc-backend" class="nav-link" data-scroll-target="#backend"><span class="header-section-number">4.2</span> Backend</a>
+  <ul class="collapse">
+  <li><a href="#design-1" id="toc-design-1" class="nav-link" data-scroll-target="#design-1"><span class="header-section-number">4.2.1</span> Design</a></li>
+  <li><a href="#development-1" id="toc-development-1" class="nav-link" data-scroll-target="#development-1"><span class="header-section-number">4.2.2</span> Development</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/HdM-LLM/docs/edit/main/design_and_development.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/HdM-LLM/docs/issues/new" class="toc-action">Report an issue</a></p><p><a href="https://github.com/HdM-LLM/docs/blob/main/design_and_development.qmd" class="toc-action">View source</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Design &amp; Development</span></h1>
 </div>
 
 
@@ -195,11 +195,58 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" role="list" style="display: none">
-
+<section id="frontend" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="frontend"><span class="header-section-number">4.1</span> Frontend</h2>
+<section id="design" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="design"><span class="header-section-number">4.1.1</span> Design</h3>
+<p>For the frontend design, we first created a mockup with Figma to get a better idea of what we wanted the website to look like. When you open the website, you will see a dashboard, that gives you a great overview over everything an human resources employee needs to know. You can see how many job postings are open, how many applications you have received and how many people you have hired over the last 30 days.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/figma_dashboard.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Dashboard view</figcaption>
+</figure>
 </div>
+<p>After clicking on the ‘Vacancies’ button on the left side, you will see an overview over all open job postings. You can see the job title, the department and since when this job posting is online. You can also see the first few words of the job description.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/figma_vacancies.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Overview over all open job postings</figcaption>
+</figure>
+</div>
+<p>If you then wish to see who has applied to a specific job posting, you can simply click the job posting itself and you will see an overview over all applications. You can see the name of the applicant, the date of when the application was received and their rating based on the required skill set for the position they applied to.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/figma_applicants.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Overview over all applications for a specific job posting</figcaption>
+</figure>
+</div>
+<p>For further information about the applicant and their rating, you can click on the ‘Details’ button and you will see a detailed overview over the applicant. You can see their name, their email address, their phone number, their address and their rating based on the required skill set for the position they applied to with a justification and a original quote from their cv. You also have the option via the buttons on the right side to view and download their cv and cover letter.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/figma_applicant_details.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Detailed overview over an applicant</figcaption>
+</figure>
+</div>
+</section>
+<section id="development" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="development"><span class="header-section-number">4.1.2</span> Development</h3>
+<p>For development we used <a href="https://react.dev/">React</a> to create the frontend of the website and as language we decided on using TypeScript instead of JavaScript. We used React because it is a very popular frontend framework and also because it is great for creating reusable components. For creating said components, we used the <a href="https://mui.com/">Material UI</a> library to get a nice and uniform look through the easy customization of each component provided by Material UI. For navigation, we used the <a href="https://reactrouter.com/en/main">React Router</a> library to create the routes for the different pages.</p>
+<p>Regarding project management for both, frontend and backend, we used GitHub Projects to create a Kanban board to keep track of our tasks and to assign them to different team members. We also used Pull Request to review each others code and to make sure that the code is up to our standards. In our opinion, reviewing each others code is a great way to learn from each other, to learn reading and understanding foreign code and to improve our own coding skills. And as a nice side effect of using GitHub Projects, we were able to keep track of our progress and to make sure, that we are on track with our project.</p>
+</section>
+</section>
+<section id="backend" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="backend"><span class="header-section-number">4.2</span> Backend</h2>
+<section id="design-1" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="design-1"><span class="header-section-number">4.2.1</span> Design</h3>
+<p>For designing the backend, we used the Entity Relationship Diagram (ERD) to get a better idea of what we wanted the database to look like and we also used class diagrams to model a raw structure of the backend.</p>
+</section>
+<section id="development-1" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="development-1"><span class="header-section-number">4.2.2</span> Development</h3>
+<p>Since we are making request to GPT-4, we decided to use Python for the backend and used <a href="https://flask.palletsprojects.com/en/2.0.x/">Flask</a> to create the API for our frontend. Our databases are setup in a docker container and we used two different types: a relational database and a document database. For the relational database we used <a href="https://www.mysql.com/">MySQL</a> and for the document database we used <a href="https://www.mongodb.com/">MongoDB</a>.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -437,11 +484,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./evaluation.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Evaluation</span></span>
+      <a href="./goals_and_requirements.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Main Goal and Requirements</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./evaluation.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Evaluation</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -457,7 +507,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="./einleitung.qmd">Introduction</a>
   </li>  
 </ul>
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/HdM-LLM/docs/edit/main/references.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/HdM-LLM/docs/issues/new" class="toc-action">Report an issue</a></p><p><a href="https://github.com/HdM-LLM/docs/blob/main/references.qmd" class="toc-action">View source</a></p></div></div></div>
+    </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

@@ -6,8 +6,8 @@ execute:
 
 book:
   page-navigation: true
-  title: "Dokumentation"
-  description: "AppName Dokumentation"
+  title: "SkillSync"
+  description: "SkillSync Documentation"
   site-url: "https://HdM-LLM.github.io/docs"
   repo-url: https://github.com/HdM-LLM/docs
   repo-actions: [edit, issue, source]
@@ -19,9 +19,9 @@ book:
     left: |
       © Team 03, 2023
     center:
-      - text: "Übersicht"
+      - text: "Overview"
         href: index.qmd
-      - text: "Einleitung"
+      - text: "Introduction"
         href: einleitung.qmd
     right:
       - icon: person-circle
@@ -30,12 +30,12 @@ book:
         aria-label: Moodle
   chapters:
     - index.qmd
-    - einleitung.qmd
-    - grundlagen.qmd
-    - ziele_und_anforderungen.qmd
-    - design_und_entwicklung.qmd
+    - introduction.qmd
+    - foundation.qmd
+    - goals_and_requirements.qmd
+    - design_and_development.qmd
     - evaluation.qmd
-    - referenzen.qmd
+    - references.qmd
 
 format:
   html:

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="AppName Dokumentation">
+<meta name="description" content="SkillSync Documentation">
 
-<title>Dokumentation - 5&nbsp; Evaluation</title>
+<title>SkillSync - 5&nbsp; Evaluation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./referenzen.html" rel="next">
-<link href="./design_und_entwicklung.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./design_and_development.html" rel="prev">
 <link href=".//images/logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -65,9 +65,9 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Dokumentation - 5&nbsp; Evaluation">
-<meta property="og:description" content="AppName Dokumentation">
-<meta property="og:site-name" content="Dokumentation">
+<meta property="og:title" content="SkillSync - 5&nbsp; Evaluation">
+<meta property="og:description" content="SkillSync Documentation">
+<meta property="og:site-name" content="SkillSync">
 </head>
 
 <body class="nav-sidebar floating">
@@ -94,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Dokumentation</a> 
+      <a href="./">SkillSync</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/HdM-LLM/docs" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
 </div>
@@ -110,31 +110,31 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Übersicht</span></a>
+ <span class="menu-text">Overview</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./einleitung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></span></a>
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./grundlagen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Grundlagen</span></span></a>
+  <a href="./foundation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Foundation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ziele_und_anforderungen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Ziele &amp; Anforderungen</span></span></a>
+  <a href="./goals_and_requirements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Main Goal and Requirements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./design_und_entwicklung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Design &amp; Entwicklung</span></span></a>
+  <a href="./design_and_development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Design &amp; Development</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -145,8 +145,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./referenzen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Referenzen</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
     </ul>
@@ -177,7 +177,44 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>…</p>
+<p>Since we are using the large language model in a way, where there are no right or wrong answers, we can’t use the the <a href="https://github.com/openai/evals">evals framework</a> that is developed and maintained by OpenAI. Instead we chose a different method for evaluation. We took an existing job posting from Meta looking for a Frontend Developer, let ChatGPT (GPT-3.5) generate around 40 applications and then manually evaluated them. Afterwards we used GPT-4 to get the same 40 applications evaluated. To be able to compare the results we used the same evaluation categories as we used for the human evaluated applications. These categories are listed below. We also added guidelines wih examples for 0 and 10 points for each category to make the evaluation process as neutral as possible:</p>
+<ol type="1">
+<li>Education and degrees
+<ul>
+<li>0: No formal education or relevant degree</li>
+<li>10: Ph.D.&nbsp;in Computer Science, Engineering, Applied Sciences, Mathematics, Physics, or related field with an exceptional academic record</li>
+</ul></li>
+<li>JavaScript/Typescript Proficiency
+<ul>
+<li>0: No knowledge or experience with JavaScript/Typescript</li>
+<li>10: Expert in JavaScript/Typescript, demonstrated by significant contributions to complex front-end systems and extensive experience in architectural design</li>
+</ul></li>
+<li>HTML &amp; CSS Skills
+<ul>
+<li>0: Limited or no understanding of HTML &amp; CSS.</li>
+<li>10: Mastery of HTML &amp; CSS, with the ability to create efficient and visually appealing user interfaces</li>
+</ul></li>
+<li>Framework Familiarity (e.g., Prototype JS, MooTools, Dojo)
+<ul>
+<li>0: No experience with any JavaScript or TypeScript frameworks</li>
+<li>10: Extensive expertise in multiple Object-Oriented JavaScript Frameworks, such as Prototype JS, MooTools, or Dojo, and a proven ability to architect complex front-end systems</li>
+</ul></li>
+<li>Automated Testing for Frontend Code
+<ul>
+<li>0: No experience in implementing automated testing for frontend code</li>
+<li>10: Adept at implementing comprehensive automated testing strategies for front-end code, ensuring high performance and reliability</li>
+</ul></li>
+<li>Collaboration and Code Reviews
+<ul>
+<li>0: Poor collaboration skills and minimal participation in code reviews</li>
+<li>10: Exceptional collaboration skills, actively contributing to design and code reviews, and effectively incorporating innovations from team members</li>
+</ul></li>
+<li>Teamwork
+<ul>
+<li>0: Works in isolation, lacks teamwork skills</li>
+<li>10: Outstanding teamwork, demonstrated by effective interaction with product designers, and contributing to the overall improvement of the engineering team’s performance</li>
+</ul></li>
+</ol>
 
 
 
@@ -417,13 +454,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./design_und_entwicklung.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Design &amp; Entwicklung</span></span>
+      <a href="./design_and_development.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Design &amp; Development</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./referenzen.html" class="pagination-link">
-        <span class="nav-page-text">Referenzen</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -434,10 +471,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">Übersicht</a>
+    <a class="nav-link active" href="./index.html" aria-current="page">Overview</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./einleitung.html">Einleitung</a>
+    <a class="nav-link" href="./einleitung.qmd">Introduction</a>
   </li>  
 </ul>
     <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/HdM-LLM/docs/edit/main/evaluation.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/HdM-LLM/docs/issues/new" class="toc-action">Report an issue</a></p><p><a href="https://github.com/HdM-LLM/docs/blob/main/evaluation.qmd" class="toc-action">View source</a></p></div></div></div>

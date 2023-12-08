@@ -1,3 +1,0 @@
-# Design & Entwicklung
-
-Unsere Architektur:
