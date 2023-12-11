@@ -2,64 +2,113 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Dokumentation",
+    "title": "SkillSync",
     "section": "",
-    "text": "Übersicht\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
+    "text": "Overview\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
   },
   {
-    "objectID": "index.html#hinweise",
-    "href": "index.html#hinweise",
-    "title": "Dokumentation",
-    "section": "Hinweise",
-    "text": "Hinweise\n\nMögliche Gliederung (Design Science Research)"
+    "objectID": "index.html#notes",
+    "href": "index.html#notes",
+    "title": "SkillSync",
+    "section": "Notes",
+    "text": "Notes\n\nMögliche Gliederung (Design Science Research)"
   },
   {
     "objectID": "index.html#styling",
     "href": "index.html#styling",
-    "title": "Dokumentation",
+    "title": "SkillSync",
     "section": "Styling",
     "text": "Styling\n\nHTML Themes"
   },
   {
-    "objectID": "einleitung.html",
-    "href": "einleitung.html",
-    "title": "1  Einleitung",
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "1  Introduction",
     "section": "",
-    "text": "Motivation\nFragestellung und Ziele\nMethodische Vorgehensweise\nAufbau der Arbeit"
+    "text": "To get started, we thought about problems, that could be solved by using artificial intelligence. We came up with the idea of creating a web application that revolutionizes the hiring process in every company. The application should be able to analyze the applicants CV and give the recruiter a recommendation, whether the applicant is suitable for the job or not. The recruiter should be able to upload the CV and the application should give a recommendation."
   },
   {
-    "objectID": "grundlagen.html#grundlage-x",
-    "href": "grundlagen.html#grundlage-x",
-    "title": "2  Grundlagen",
-    "section": "2.1 Grundlage X",
-    "text": "2.1 Grundlage X"
+    "objectID": "foundation.html#large-language-models",
+    "href": "foundation.html#large-language-models",
+    "title": "2  Foundation",
+    "section": "2.1 Large Language Models",
+    "text": "2.1 Large Language Models\nLarge language models are a new paradigm in NLP. They are trained on large amounts of text data and can be used for a variety of tasks. They are also known as pre-trained language models. The most popular ones are BERT, GPT-2, GPT-3, T5, and XLNet. [Find Sources]\nT5: Text-to-Text Transfer Transformer - HuggingFace & Paper"
   },
   {
-    "objectID": "grundlagen.html#grundlage-y",
-    "href": "grundlagen.html#grundlage-y",
-    "title": "2  Grundlagen",
-    "section": "2.2 Grundlage Y",
-    "text": "2.2 Grundlage Y"
+    "objectID": "foundation.html#human-resources",
+    "href": "foundation.html#human-resources",
+    "title": "2  Foundation",
+    "section": "2.2 Human Resources (?)",
+    "text": "2.2 Human Resources (?)"
   },
   {
-    "objectID": "ziele_und_anforderungen.html",
-    "href": "ziele_und_anforderungen.html",
-    "title": "3  Ziele & Anforderungen",
+    "objectID": "goals_and_requirements.html",
+    "href": "goals_and_requirements.html",
+    "title": "3  Main Goal and Requirements",
     "section": "",
-    "text": "Die folgenden Ziele möchten wir mit der Entwicklung dieser App erreichen:\n\n\n\n\n\nUm diese Ziele erreichen zu können, benötigten wir die nachstehenden Androderungen:"
+    "text": "4 Use Cases"
   },
   {
-    "objectID": "design_und_entwicklung.html",
-    "href": "design_und_entwicklung.html",
-    "title": "4  Design & Entwicklung",
-    "section": "",
-    "text": "Unsere Architektur:"
+    "objectID": "goals_and_requirements.html#vacancy",
+    "href": "goals_and_requirements.html#vacancy",
+    "title": "3  Main Goal and Requirements",
+    "section": "3.1 Vacancy",
+    "text": "3.1 Vacancy\nA vacancy or job posting is a description of a job opening. It contains information about the job, such as the job title, the job description, the job qualifications, the job type (full-time, part-time, etc.), the job category (e.g. IT, Marketing, etc.), aswell as the salary."
+  },
+  {
+    "objectID": "goals_and_requirements.html#application",
+    "href": "goals_and_requirements.html#application",
+    "title": "3  Main Goal and Requirements",
+    "section": "3.2 Application",
+    "text": "3.2 Application\nAn application is a document which generally consists of a cover letter, a cv (curriculum vitae), and other supporting materials. It is used by applicants to apply for a job posting."
+  },
+  {
+    "objectID": "goals_and_requirements.html#applicant",
+    "href": "goals_and_requirements.html#applicant",
+    "title": "3  Main Goal and Requirements",
+    "section": "3.3 Applicant",
+    "text": "3.3 Applicant\nAn applicant is a person who applies for a vacancy. An applicant can have multiple applications to different vacancies."
+  },
+  {
+    "objectID": "goals_and_requirements.html#create-a-new-vacancy",
+    "href": "goals_and_requirements.html#create-a-new-vacancy",
+    "title": "3  Main Goal and Requirements",
+    "section": "4.1 Create a new vacancy",
+    "text": "4.1 Create a new vacancy\nAn employee of the company should be able to create a new job posting. The job posting should contain the following information:\n\nJob title\nJob description\nJob qualifications\nJob type\ndepartment"
+  },
+  {
+    "objectID": "goals_and_requirements.html#manage-applications",
+    "href": "goals_and_requirements.html#manage-applications",
+    "title": "3  Main Goal and Requirements",
+    "section": "4.2 Manage applications",
+    "text": "4.2 Manage applications\nAn employee in HR of the company should be able to manage applications. This includes the following tasks:\n\nView applications\nDelete applications\nUpdate applications\nCreate applications\nFilter applications"
+  },
+  {
+    "objectID": "goals_and_requirements.html#manage-applicants",
+    "href": "goals_and_requirements.html#manage-applicants",
+    "title": "3  Main Goal and Requirements",
+    "section": "4.3 Manage applicants",
+    "text": "4.3 Manage applicants\nAn employee in HR of the company should be able to manage applicants. This includes the following tasks:\n\nView applicants\nDelete applicants\nUpdate applicants\nCreate applicants\nFilter applicants\nView applications of an applicant"
+  },
+  {
+    "objectID": "design_and_development.html#frontend",
+    "href": "design_and_development.html#frontend",
+    "title": "4  Design & Development",
+    "section": "4.1 Frontend",
+    "text": "4.1 Frontend\n\n4.1.1 Design\nFor the frontend design, we first created a mockup with Figma to get a better idea of what we wanted the website to look like. When you open the website, you will see a dashboard, that gives you a great overview over everything an human resources employee needs to know. You can see how many job postings are open, how many applications you have received and how many people you have hired over the last 30 days.\n\n\n\nDashboard view\n\n\nAfter clicking on the ‘Vacancies’ button on the left side, you will see an overview over all open job postings. You can see the job title, the department and since when this job posting is online. You can also see the first few words of the job description.\n\n\n\nOverview over all open job postings\n\n\nIf you then wish to see who has applied to a specific job posting, you can simply click the job posting itself and you will see an overview over all applications. You can see the name of the applicant, the date of when the application was received and their rating based on the required skill set for the position they applied to.\n\n\n\nOverview over all applications for a specific job posting\n\n\nFor further information about the applicant and their rating, you can click on the ‘Details’ button and you will see a detailed overview over the applicant. You can see their name, their email address, their phone number, their address and their rating based on the required skill set for the position they applied to with a justification and a original quote from their cv. You also have the option via the buttons on the right side to view and download their cv and cover letter.\n\n\n\nDetailed overview over an applicant\n\n\n\n\n4.1.2 Development\nFor development we used React to create the frontend of the website and as language we decided on using TypeScript instead of JavaScript. We used React because it is a very popular frontend framework and also because it is great for creating reusable components. For creating said components, we used the Material UI library to get a nice and uniform look through the easy customization of each component provided by Material UI. For navigation, we used the React Router library to create the routes for the different pages.\nRegarding project management for both, frontend and backend, we used GitHub Projects to create a Kanban board to keep track of our tasks and to assign them to different team members. We also used Pull Request to review each others code and to make sure that the code is up to our standards. In our opinion, reviewing each others code is a great way to learn from each other, to learn reading and understanding foreign code and to improve our own coding skills. And as a nice side effect of using GitHub Projects, we were able to keep track of our progress and to make sure, that we are on track with our project."
+  },
+  {
+    "objectID": "design_and_development.html#backend",
+    "href": "design_and_development.html#backend",
+    "title": "4  Design & Development",
+    "section": "4.2 Backend",
+    "text": "4.2 Backend\n\n4.2.1 Design\nFor designing the backend, we used the Entity Relationship Diagram (ERD) to get a better idea of what we wanted the database to look like and we also used class diagrams to model a raw structure of the backend.\n\n\n4.2.2 Development\nSince we are making request to GPT-4, we decided to use Python for the backend and used Flask to create the API for our frontend. Our databases are setup in a docker container and we used two different types: a relational database and a document database. For the relational database we used MySQL and for the document database we used MongoDB."
   },
   {
     "objectID": "evaluation.html",
     "href": "evaluation.html",
     "title": "5  Evaluation",
     "section": "",
-    "text": "…"
+    "text": "Since we are using the large language model in a way, where there are no right or wrong answers, we can’t use the the evals framework that is developed and maintained by OpenAI. Instead we chose a different method for evaluation. We took an existing job posting from Meta looking for a Frontend Developer, let ChatGPT (GPT-3.5) generate around 40 applications and then manually evaluated them. Afterwards we used GPT-4 to get the same 40 applications evaluated. To be able to compare the results we used the same evaluation categories as we used for the human evaluated applications. These categories are listed below. We also added guidelines wih examples for 0 and 10 points for each category to make the evaluation process as neutral as possible:\n\nEducation and degrees\n\n0: No formal education or relevant degree\n10: Ph.D. in Computer Science, Engineering, Applied Sciences, Mathematics, Physics, or related field with an exceptional academic record\n\nJavaScript/Typescript Proficiency\n\n0: No knowledge or experience with JavaScript/Typescript\n10: Expert in JavaScript/Typescript, demonstrated by significant contributions to complex front-end systems and extensive experience in architectural design\n\nHTML & CSS Skills\n\n0: Limited or no understanding of HTML & CSS.\n10: Mastery of HTML & CSS, with the ability to create efficient and visually appealing user interfaces\n\nFramework Familiarity (e.g., Prototype JS, MooTools, Dojo)\n\n0: No experience with any JavaScript or TypeScript frameworks\n10: Extensive expertise in multiple Object-Oriented JavaScript Frameworks, such as Prototype JS, MooTools, or Dojo, and a proven ability to architect complex front-end systems\n\nAutomated Testing for Frontend Code\n\n0: No experience in implementing automated testing for frontend code\n10: Adept at implementing comprehensive automated testing strategies for front-end code, ensuring high performance and reliability\n\nCollaboration and Code Reviews\n\n0: Poor collaboration skills and minimal participation in code reviews\n10: Exceptional collaboration skills, actively contributing to design and code reviews, and effectively incorporating innovations from team members\n\nTeamwork\n\n0: Works in isolation, lacks teamwork skills\n10: Outstanding teamwork, demonstrated by effective interaction with product designers, and contributing to the overall improvement of the engineering team’s performance"
   }
 ]
