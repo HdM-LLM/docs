@@ -1,0 +1,55 @@
+# Main Goal and Requirements
+
+Our main goal is to create a simple and easy to use tool for human resource employees to manage their incoming applications and to manage the creation of new vacancies. The tool should be able to handle the following tasks:
+
+- Create new vacancies
+- Manage vacancies
+- Manage applications
+- Manage applicants
+
+
+## Vacancy
+
+A vacancy or job posting is a description of a job opening. It contains information about the job, such as the job title, the job description, the job qualifications, the job type (full-time, part-time, etc.), the job category (e.g. IT, Marketing, etc.), aswell as the salary.
+
+## Application
+
+An application is a document which generally consists of a cover letter, a cv (curriculum vitae), and other supporting materials. It is used by applicants to apply for a job posting.
+
+## Applicant
+
+An applicant is a person who applies for a vacancy. An applicant can have multiple applications to different vacancies.
+
+# Use Cases
+
+## Create a new vacancy
+
+An employee of the company should be able to create a new job posting. The job posting should contain the following information:
+
+- Job title
+- Job description
+- Job qualifications
+- Job type
+- department
+  
+## Manage applications
+
+An employee in HR of the company should be able to manage applications. This includes the following tasks:
+
+- View applications
+- Delete applications
+- Update applications
+- Create applications
+- Filter applications
+
+## Manage applicants
+
+An employee in HR of the company should be able to manage applicants. This includes the following tasks:
+
+- View applicants
+- Delete applicants
+- Update applicants
+- Create applicants
+- Filter applicants
+- View applications of an applicant
+

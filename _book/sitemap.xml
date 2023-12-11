@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://HdM-LLM.github.io/docs/index.html</loc>
-    <lastmod>2023-10-24T11:51:00.379Z</lastmod>
+    <lastmod>2023-12-08T16:57:28.617Z</lastmod>
   </url>
   <url>
     <loc>https://HdM-LLM.github.io/docs/intro.html</loc>
@@ -14,30 +14,46 @@
   </url>
   <url>
     <loc>https://HdM-LLM.github.io/docs/references.html</loc>
-    <lastmod>2023-10-24T10:50:27.127Z</lastmod>
+    <lastmod>2023-12-08T17:20:57.459Z</lastmod>
   </url>
   <url>
     <loc>https://HdM-LLM.github.io/docs/ziele_und_anforderungen.html</loc>
-    <lastmod>2023-10-24T11:00:44.315Z</lastmod>
+    <lastmod>2023-12-08T15:27:57.642Z</lastmod>
   </url>
   <url>
     <loc>https://HdM-LLM.github.io/docs/design_und_entwicklung.html</loc>
-    <lastmod>2023-10-24T11:00:17.022Z</lastmod>
+    <lastmod>2023-11-27T18:09:50.863Z</lastmod>
   </url>
   <url>
     <loc>https://HdM-LLM.github.io/docs/einleitung.html</loc>
-    <lastmod>2023-10-24T11:47:29.584Z</lastmod>
+    <lastmod>2023-12-08T15:15:35.888Z</lastmod>
   </url>
   <url>
     <loc>https://HdM-LLM.github.io/docs/grundlagen.html</loc>
-    <lastmod>2023-10-24T11:49:08.752Z</lastmod>
+    <lastmod>2023-11-27T18:09:50.858Z</lastmod>
   </url>
   <url>
     <loc>https://HdM-LLM.github.io/docs/evaluation.html</loc>
-    <lastmod>2023-10-24T11:00:42.829Z</lastmod>
+    <lastmod>2023-12-08T17:20:44.744Z</lastmod>
   </url>
   <url>
     <loc>https://HdM-LLM.github.io/docs/referenzen.html</loc>
-    <lastmod>2023-10-24T11:00:42.849Z</lastmod>
+    <lastmod>2023-11-27T18:09:50.866Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HdM-LLM.github.io/docs/design_and_development.html</loc>
+    <lastmod>2023-12-08T16:58:22.829Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HdM-LLM.github.io/docs/introduction.html</loc>
+    <lastmod>2023-12-08T17:13:26.015Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HdM-LLM.github.io/docs/foundation.html</loc>
+    <lastmod>2023-12-08T16:58:14.172Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HdM-LLM.github.io/docs/goals_and_requirements.html</loc>
+    <lastmod>2023-12-08T17:21:00.724Z</lastmod>
   </url>
 </urlset>

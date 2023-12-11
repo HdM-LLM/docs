@@ -1,0 +1,11 @@
+# Foundation
+
+## Large Language Models
+
+Large language models are a new paradigm in NLP. They are trained on large amounts of text data and can be used for a variety of tasks. They are also known as pre-trained language models. The most popular ones are BERT, GPT-2, GPT-3, T5, and XLNet. <span style="color: red;">[Find Sources]</span>
+
+T5: Text-to-Text Transfer Transformer - [HuggingFace](https://www.mysql.com/) & [Paper](https://arxiv.org/pdf/1910.10683.pdf)
+
+
+
+## Human Resources (?)
