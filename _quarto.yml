@@ -31,10 +31,10 @@ book:
   chapters:
     - index.qmd
     - introduction.qmd
-    - foundation.qmd
-    - goals_and_requirements.qmd
-    - design_and_development.qmd
-    - evaluation.qmd
+    - use_case.qmd
+    - design_decisions.qmd
+    - implementation.qmd
+    - user_instructions.qmd
     - references.qmd
 
 format:

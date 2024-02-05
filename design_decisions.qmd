@@ -1,4 +1,4 @@
-# Main Goal and Requirements
+# Design Decisions
 
 Our main goal is to create a simple and easy to use tool for human resource employees to manage their incoming applications and to manage the creation of new vacancies. The tool should be able to handle the following tasks:
 

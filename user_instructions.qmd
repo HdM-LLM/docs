@@ -1,4 +1,4 @@
-# Evaluation
+# User Instructions
 
 Since we are using the large language model in a way, where there are no right or wrong answers, we can't use the the [evals framework](https://github.com/openai/evals) that is developed and maintained by OpenAI. Instead we chose a different method for evaluation. We took an existing job posting from Meta looking for a Frontend Developer, let ChatGPT (GPT-3.5) generate around 40 applications and then manually evaluated them. Afterwards we used GPT-4 to get the same 40 applications evaluated. To be able to compare the results we used the same evaluation categories as we used for the human evaluated applications. These categories are listed below. We also added guidelines wih examples for 0 and 10 points for each category to make the evaluation process as neutral as possible:
 

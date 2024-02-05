@@ -1,4 +1,4 @@
-# Foundation
+# Use Case
 
 ## Large Language Models
 
