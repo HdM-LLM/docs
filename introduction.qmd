@@ -1,5 +1,3 @@
 # Introduction
 
-#TODO: remove design science research from documentation; focus on the things listed in the readme
-
-To get started, we thought about problems, that could be solved by using artificial intelligence. We came up with the idea of creating a web application that revolutionizes the hiring process in every company. The application should be able to analyze the applicants CV and give the recruiter a recommendation, whether the applicant is suitable for the job or not. The recruiter should be able to upload the CV and the application should give a recommendation. 
+To get started, we thought about problems, that could be either assisted or solved by using artificial intelligence. We came up with the idea of creating a web application that could potentially revolutionize the hiring process in every company. the main idea is to create a web application that can analyze a CV and give a recommendation to the recruiter, whether the applicant is suitable for the job or not. 
