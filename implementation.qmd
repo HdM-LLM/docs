@@ -23,9 +23,15 @@ For further information about the applicant and their rating, you can click on t
 
 ### Development
 
-For development we used [React](https://react.dev/) to create the frontend of the website and as language we decided on using TypeScript instead of JavaScript. We used React because it is a very popular frontend framework and also because it is great for creating reusable components. For creating said components, we used the [Material UI](https://mui.com/) library to get a nice and uniform look through the easy customization of each component provided by Material UI. For navigation, we used the [React Router](https://reactrouter.com/en/main) library to create the routes for the different pages.
+For development we used [React](https://react.dev/) to create the frontend of the website and as language we decided on using TypeScript instead of JavaScript. We used React because it is a very popular frontend framework and also because it is great for creating reusable components. For creating components, we used the [Material UI](https://mui.com/) library to get a nice and uniform look through the easy customization of each component provided by Material UI. For navigation, we used the [React Router](https://reactrouter.com/en/main) library to create the routes for the different pages.
 
 Regarding project management for both, frontend and backend, we used GitHub Projects to create a Kanban board to keep track of our tasks and to assign them to different team members. We also used Pull Request to review each others code and to make sure that the code is up to our standards. In our opinion, reviewing each others code is a great way to learn from each other, to learn reading and understanding foreign code and to improve our own coding skills. And as a nice side effect of using GitHub Projects, we were able to keep track of our progress and to make sure, that we are on track with our project.
+
+For Routing through the different pages, we used the [React Router](https://reactrouter.com/) library to create the routes. We created a API module so that we have a standardize and easy way to fetch data from our backend REST-API.
+In regards to TypeScript types we defined all types object orientated like we designed them in the backend and used them throughout the project to make sure that we have a consistent type system.
+
+When it comes to creating components, we divided our mockup into smaller parts and created a component for each part. We always tried to create reusable components to make sure that we have a consistent look throughout the website. To ensure that the components don't become too big, we also created smaller helper components to make sure that the components are easy to understand and to maintain.
+We also created a theme for the website to make sure that we have a consistent look throughout the website.
 
 
 ## Backend
