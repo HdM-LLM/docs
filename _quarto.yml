@@ -22,7 +22,7 @@ book:
       - text: "Overview"
         href: index.qmd
       - text: "Introduction"
-        href: einleitung.qmd
+        href: introduction.qmd
     right:
       - icon: person-circle
       - text: "Moodle"
