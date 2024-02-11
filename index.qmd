@@ -2,9 +2,15 @@
 
 This documentation is for the *SkillSync* application and covers the following topics:
 
-- **Introduction:** This section provides information about the purpose, scope, and objectives of the application.
-- **Use Case:** This section provides a detailed description of the application's use case.
-- **Design Decisions:** This section provides information about the design decisions made during the development of the application.
-- **Implementation:** This section provides information about the implementation of the application.
-- **User Instructions:** This section provides information about how to use the application.
-- **Future Road Map:** This section provides information about the future development of the application.
+- [Introduction](introduction.qmd): This section provides information about the purpose, scope, and objectives of the application.
+
+- [Use Case](use_case.qmd): This section provides a detailed description of the application's use case.
+
+- [Design Decisions](design_decisions.qmd): This section provides information about the design decisions made during the development of the application.
+
+- [Implementation](implementation.qmd): This section provides information about the implementation of the application.
+
+- [User Instructions](user_instructions.qmd): This section provides information about how to use the application.
+
+- [Future Road Map](future-road-map.qmd): This section provides information about the future development of the application.
+

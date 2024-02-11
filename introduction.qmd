@@ -1,7 +1,9 @@
-# Introduction
+# Introduction {#sec-introduction}
 
 In today's competitive job market, recruiters are faced with the daunting task of sifting through countless resumes to find the perfect candidate for a given position. Traditional methods of resume screening often rely on manual review processes, which can be time-consuming, subjective, and prone to bias. One of the significant challenges in the recruitment process is the need for recruiters to possess expertise across various job fields to accurately assess the qualifications of applicants. However, it's impractical for recruiters to be experts in every domain they're hiring for, leading to potential gaps in understanding and evaluation.
 
-To address these challenges, we have developed an innovative application called <span style="color:#93c54b;">**SkillSync**</span>, which aims to revolutionize the recruitment industry by harnessing the power of artificial intelligence (AI). Leveraging OpenAI's GPT-4 model, our application offers recruiters a useful tool for analyzing applicant resumes and identifying the most qualified candidates for a given job. 
+To address these challenges, we have developed an innovative application called <span style="color:#93c54b;">**SkillSync**</span>, which aims to revolutionize the recruitment industry by harnessing the power of artificial intelligence (AI). Leveraging OpenAI's GPT-4 model, our application offers recruiters a useful tool for analyzing applicant resumes and identifying the most qualified candidates for a given job.
+
+Our goal was to create a user-friendly, AI-powered recruitment tool that can help recruiters quickly and accurately evaluate resumes and identify the most qualified candidates. By automating the resume screening process, our application aims to save recruiters time and effort, reduce the potential for bias, and improve the overall efficiency of the recruitment process.
 
 In this documentation, we will outline the process of creating this AI-powered recruitment tool, detailing the steps involved in deciding on the use case, designing the solution, and implementing the application. We will also provide information about how we evaluated the model's performance and discuss potential future improvements.

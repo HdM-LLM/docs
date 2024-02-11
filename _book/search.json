@@ -235,7 +235,7 @@
     "href": "introduction.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "In today’s competitive job market, recruiters are faced with the daunting task of sifting through countless resumes to find the perfect candidate for a given position. Traditional methods of resume screening often rely on manual review processes, which can be time-consuming, subjective, and prone to bias. One of the significant challenges in the recruitment process is the need for recruiters to possess expertise across various job fields to accurately assess the qualifications of applicants. However, it’s impractical for recruiters to be experts in every domain they’re hiring for, leading to potential gaps in understanding and evaluation.\nTo address these challenges, we have developed an innovative application called SkillSync, which aims to revolutionize the recruitment industry by harnessing the power of artificial intelligence (AI). Leveraging OpenAI’s GPT-4 model, our application offers recruiters a useful tool for analyzing applicant resumes and identifying the most qualified candidates for a given job.\nIn this documentation, we will outline the process of creating this AI-powered recruitment tool, detailing the steps involved in deciding on the use case, designing the solution, and implementing the application. We will also provide information about how we evaluated the model’s performance and discuss potential future improvements."
+    "text": "In today’s competitive job market, recruiters are faced with the daunting task of sifting through countless resumes to find the perfect candidate for a given position. Traditional methods of resume screening often rely on manual review processes, which can be time-consuming, subjective, and prone to bias. One of the significant challenges in the recruitment process is the need for recruiters to possess expertise across various job fields to accurately assess the qualifications of applicants. However, it’s impractical for recruiters to be experts in every domain they’re hiring for, leading to potential gaps in understanding and evaluation.\nTo address these challenges, we have developed an innovative application called SkillSync, which aims to revolutionize the recruitment industry by harnessing the power of artificial intelligence (AI). Leveraging OpenAI’s GPT-4 model, our application offers recruiters a useful tool for analyzing applicant resumes and identifying the most qualified candidates for a given job.\nOur goal is to create a user-friendly, AI-powered recruitment tool that can help recruiters quickly and accurately evaluate resumes and identify the most qualified candidates. By automating the resume screening process, our application aims to save recruiters time and effort, reduce the potential for bias, and improve the overall efficiency of the recruitment process.\nIn this documentation, we will outline the process of creating this AI-powered recruitment tool, detailing the steps involved in deciding on the use case, designing the solution, and implementing the application. We will also provide information about how we evaluated the model’s performance and discuss potential future improvements."
   },
   {
     "objectID": "foundation.html#grundlage-x",
@@ -439,5 +439,12 @@
     "title": "2  Use Case",
     "section": "2.2 Use Case 2: AI Job Posting",
     "text": "2.2 Use Case 2: AI Job Posting\nThe second use case is to create a new job posting or vacancy with the help of AI. The recruiter only needs to enter the job title, a description of the job, and the required skills. The AI will then create a job posting based on the input of the recruiter. This vacancy is then displayed within our system among the other vacancies. Now, the recruiter can start receiving applications for the job. The AI will then rate the resumes of the applicants based on the vacancy and the recruiter can decide if the applicant is suitable for the job based on the score."
+  },
+  {
+    "objectID": "future_road_map.html",
+    "href": "future_road_map.html",
+    "title": "6  Future Road Map",
+    "section": "",
+    "text": "In the current state, there are a few things that should be improved or added to the project before it can be considered as a complete solution. Here are some of the ideas:\n\nbla bla bla"
   }
 ]

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://HdM-LLM.github.io/docs/index.html</loc>
-    <lastmod>2024-02-11T16:18:32.320Z</lastmod>
+    <lastmod>2024-02-11T16:55:14.144Z</lastmod>
   </url>
   <url>
     <loc>https://HdM-LLM.github.io/docs/intro.html</loc>
@@ -46,7 +46,7 @@
   </url>
   <url>
     <loc>https://HdM-LLM.github.io/docs/introduction.html</loc>
-    <lastmod>2024-02-11T16:18:15.543Z</lastmod>
+    <lastmod>2024-02-11T16:49:00.492Z</lastmod>
   </url>
   <url>
     <loc>https://HdM-LLM.github.io/docs/foundation.html</loc>
@@ -58,7 +58,7 @@
   </url>
   <url>
     <loc>https://HdM-LLM.github.io/docs/use_case.html</loc>
-    <lastmod>2024-02-11T16:18:40.859Z</lastmod>
+    <lastmod>2024-02-11T16:50:58.329Z</lastmod>
   </url>
   <url>
     <loc>https://HdM-LLM.github.io/docs/design_decisions.html</loc>
@@ -66,10 +66,14 @@
   </url>
   <url>
     <loc>https://HdM-LLM.github.io/docs/implementation.html</loc>
-    <lastmod>2024-02-11T16:33:41.621Z</lastmod>
+    <lastmod>2024-02-11T16:37:16.719Z</lastmod>
   </url>
   <url>
     <loc>https://HdM-LLM.github.io/docs/user_instructions.html</loc>
     <lastmod>2024-02-09T14:49:32.725Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HdM-LLM.github.io/docs/future_road_map.html</loc>
+    <lastmod>2024-02-11T16:57:53.864Z</lastmod>
   </url>
 </urlset>

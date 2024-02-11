@@ -7,7 +7,7 @@ execute:
 book:
   page-navigation: true
   title: "SkillSync"
-  description: "SkillSync Documentation"
+  description: "Documentation"
   site-url: "https://HdM-LLM.github.io/docs"
   repo-url: https://github.com/HdM-LLM/docs
   repo-actions: [edit, issue, source]
@@ -21,8 +21,6 @@ book:
     center:
       - text: "Overview"
         href: index.qmd
-      - text: "Introduction"
-        href: introduction.qmd
     right:
       - icon: person-circle
       - text: "Moodle"
@@ -35,6 +33,7 @@ book:
     - design_decisions.qmd
     - implementation.qmd
     - user_instructions.qmd
+    - future_road_map.qmd
     - references.qmd
 
 format:

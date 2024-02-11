@@ -1,0 +1,5 @@
+# Future Road Map
+
+In the current state, there are a few things that should be improved or added to the project before it can be considered as a complete solution. Here are some of the ideas:
+
+- bla bla bla
