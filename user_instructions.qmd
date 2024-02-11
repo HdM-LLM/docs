@@ -42,16 +42,17 @@
 ### Step 2: Upload CV
 - Drag and drop your CV as a PDF into the designated window.
 - Click the "Send" button to upload the applicant.
-- **Screenshot**: Insert a screenshot here showing the CV upload interface.
+- **Screenshot**: ![User Instruction 6](/images/user_instruction_6.png)
+
 
 ### Step 3: Review Applicant
 - Navigate to "Vacancies" in the navigation bar and select the relevant vacancy.
 - All applicants for the vacancy will be listed; click on "Details" for the new applicant.
-- **Screenshot**: Insert a screenshot here showing the list of applicants and the details button.
+- **Screenshot**: ![User Instruction 7](/images/user_instruction_7.png)
+
 
 ### Step 4: Applicant Overview
 - You will see a detailed overview of the applicant, including their total score and scores for individual categories.
 - Justifications for the scores and quotes from the CV supporting these assessments are provided.
-- **Screenshot**: Insert a screenshot here showing the detailed overview of an applicant's scores.
+- **Screenshot**: ![User Instruction 8](/images/user_instruction_8.png)
 
-These instructions provide a comprehensive guide for users to efficiently generate vacancies and upload new applicants, with visual aids at key steps to ensure clarity and ease of use.
