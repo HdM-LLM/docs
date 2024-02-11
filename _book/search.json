@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "SkillSync",
     "section": "",
-    "text": "Overview\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
+    "text": "Overview\nThis documentation is for the SkillSync application and covers the following topics:\n\nIntroduction: This section provides information about the purpose, scope, and objectives of the application.\nUse Case: This section provides a detailed description of the application’s use case.\nDesign Decisions: This section provides information about the design decisions made during the development of the application.\nImplementation: This section provides information about the implementation of the application.\nUser Instructions: This section provides information about how to use the application.\nFuture Road Map: This section provides information about the future development of the application."
   },
   {
     "objectID": "index.html#hinweise",

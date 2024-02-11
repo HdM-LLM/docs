@@ -1,14 +1,10 @@
 # Overview {.unnumbered}
 
-This is a Quarto book.
+This documentation is for the *SkillSync* application and covers the following topics:
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
-
-
-## Notes
-
-- [Mögliche Gliederung](https://kirenz.github.io/thesis-guide/docs/design-science-research-gliederung.html) (Design Science Research)
-
-## Styling
-
-- [HTML Themes](https://quarto.org/docs/output-formats/html-themes.html)
+- **Introduction:** This section provides information about the purpose, scope, and objectives of the application.
+- **Use Case:** This section provides a detailed description of the application's use case.
+- **Design Decisions:** This section provides information about the design decisions made during the development of the application.
+- **Implementation:** This section provides information about the implementation of the application.
+- **User Instructions:** This section provides information about how to use the application.
+- **Future Road Map:** This section provides information about the future development of the application.

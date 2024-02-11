@@ -17,7 +17,7 @@ book:
   search: true
   page-footer:
     left: |
-      © Team 03, 2023
+      © Team 03, 2023-2024
     center:
       - text: "Overview"
         href: index.qmd
