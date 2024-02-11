@@ -4,27 +4,7 @@
     "href": "index.html",
     "title": "SkillSync",
     "section": "",
-    "text": "Overview\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
-    "crumbs": [
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "index.html#notes",
-    "href": "index.html#notes",
-    "title": "SkillSync",
-    "section": "Notes",
-    "text": "Notes\n\nMögliche Gliederung (Design Science Research)",
-    "crumbs": [
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "index.html#styling",
-    "href": "index.html#styling",
-    "title": "SkillSync",
-    "section": "Styling",
-    "text": "Styling\n\nHTML Themes",
+    "text": "Overview\nThis documentation is for the SkillSync application and covers the following topics:\n\nIntroduction: This section provides information about the purpose, scope, and objectives of the application.\nUse Case: This section provides a detailed description of the application’s use case.\nDesign Decisions: This section provides information about the design decisions made during the development of the application.\nImplementation: This section provides information about the implementation of the application.\nUser Instructions: This section provides information about how to use the application.\nFuture Road Map: This section provides information about the future development of the application.",
     "crumbs": [
       "Overview"
     ]
@@ -34,7 +14,7 @@
     "href": "introduction.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "#TODO: remove design science research from documentation; focus on the things listed in the readme\nTo get started, we thought about problems, that could be solved by using artificial intelligence. We came up with the idea of creating a web application that revolutionizes the hiring process in every company. The application should be able to analyze the applicants CV and give the recruiter a recommendation, whether the applicant is suitable for the job or not. The recruiter should be able to upload the CV and the application should give a recommendation.",
+    "text": "In today’s competitive job market, recruiters are faced with the daunting task of sifting through countless resumes to find the perfect candidate for a given position. Traditional methods of resume screening often rely on manual review processes, which can be time-consuming, subjective, and prone to bias. One of the significant challenges in the recruitment process is the need for recruiters to possess expertise across various job fields to accurately assess the qualifications of applicants. However, it’s impractical for recruiters to be experts in every domain they’re hiring for, leading to potential gaps in understanding and evaluation.\nTo address these challenges, we have developed an innovative application called SkillSync, which aims to revolutionize the recruitment industry by harnessing the power of artificial intelligence (AI). Leveraging OpenAI’s GPT-4 model, our application offers recruiters a useful tool for analyzing applicant resumes and identifying the most qualified candidates for a given job.\nIn this documentation, we will outline the process of creating this AI-powered recruitment tool, detailing the steps involved in deciding on the use case, designing the solution, and implementing the application. We will also provide information about how we evaluated the model’s performance and discuss potential future improvements.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -44,17 +24,17 @@
     "href": "use_case.html",
     "title": "2  Use Case",
     "section": "",
-    "text": "2.1 Large Language Models\nLarge language models are a new paradigm in NLP. They are trained on large amounts of text data and can be used for a variety of tasks. They are also known as pre-trained language models. The most popular ones are BERT, GPT-2, GPT-3, T5, and XLNet. [Find Sources]\nT5: Text-to-Text Transfer Transformer - HuggingFace & Paper",
+    "text": "2.1 Use Case 1: AI Resume Rating\nOur main use case is to let AI rate an applicants’ resume. The applicant can upload his CV (in PDF format) and the AI will rate the resume based on the vacancy the user applies for. Each vacancy has a set of skills on which the resume will be rated. Each skill has a weight and guidelines for when to rate the skill with zero or ten points. The AI will rate the resume which results in a score which will be display in the user interface. The score will only be visible to the recruiter and not to the applicant. The recruiter can then decide if he wants to proceed with the applicant and invite him for an interview or reject the application. He could also contact the applicant to request additional information or to clarify some points.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Use Case</span>"
     ]
   },
   {
-    "objectID": "use_case.html#human-resources",
-    "href": "use_case.html#human-resources",
+    "objectID": "use_case.html#use-case-2-ai-job-posting",
+    "href": "use_case.html#use-case-2-ai-job-posting",
     "title": "2  Use Case",
-    "section": "2.2 Human Resources (?)",
-    "text": "2.2 Human Resources (?)",
+    "section": "2.2 Use Case 2: AI Job Posting",
+    "text": "2.2 Use Case 2: AI Job Posting\nThe second use case is to create a new job posting or vacancy with the help of AI. The recruiter only needs to enter the job title, a description of the job, and the required skills. The AI will then create a job posting based on the input of the recruiter. This vacancy is then displayed within our system among the other vacancies. Now, the recruiter can start receiving applications for the job. The AI will then rate the resumes of the applicants based on the vacancy and the recruiter can decide if the applicant is suitable for the job based on the score.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Use Case</span>"
     ]
