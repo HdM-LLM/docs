@@ -169,8 +169,8 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#backend" id="toc-backend" class="nav-link" data-scroll-target="#backend"><span class="header-section-number">4.2</span> Backend</a>
   <ul class="collapse">
-  <li><a href="#design-1" id="toc-design-1" class="nav-link" data-scroll-target="#design-1"><span class="header-section-number">4.2.1</span> Design</a></li>
-  <li><a href="#development-1" id="toc-development-1" class="nav-link" data-scroll-target="#development-1"><span class="header-section-number">4.2.2</span> Development</a></li>
+  <li><a href="#backend-design" id="toc-backend-design" class="nav-link" data-scroll-target="#backend-design"><span class="header-section-number">4.2.1</span> Backend Design</a></li>
+  <li><a href="#backend-development" id="toc-backend-development" class="nav-link" data-scroll-target="#backend-development"><span class="header-section-number">4.2.2</span> Backend Development</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/HdM-LLM/docs/edit/main/implementation.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/HdM-LLM/docs/issues/new" class="toc-action">Report an issue</a></p><p><a href="https://github.com/HdM-LLM/docs/blob/main/implementation.qmd" class="toc-action">View source</a></p></div></div></nav>
@@ -238,15 +238,56 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="backend" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="backend"><span class="header-section-number">4.2</span> Backend</h2>
-<section id="design-1" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="design-1"><span class="header-section-number">4.2.1</span> Design</h3>
-<p>For designing the backend, we used the Entity Relationship Diagram (ERD) to get a better idea of what we wanted the database to look like and we also used class diagrams to model a raw structure of the backend.</p>
+<section id="backend-design" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="backend-design"><span class="header-section-number">4.2.1</span> Backend Design</h3>
+<p>For designing the backend, we used the Entity Relationship Diagram (ERD) to get a better idea of what we wanted the database to look like and we also used class diagrams to model a raw structure of the backend. In addition to the ERD we figured out, which type of database we should use for what kind of data.</p>
+<section id="class-diagram" class="level4" data-number="4.2.1.1">
+<h4 data-number="4.2.1.1" class="anchored" data-anchor-id="class-diagram"><span class="header-section-number">4.2.1.1</span> Class Diagram</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/classdiagramm.png"><img src="./images/classdiagramm.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">The class diagram containing all the classes</figcaption>
+</figure>
+</div>
+<p>As the class diagram shows all classes interhit the business object, so every instance of every class gets a id and a creation date. The class User could be missleading, since the applicant is not a user in the system per se, but still inherits the fistname and the lastname from the user. The Idea was to also create a Employee class, which would inherit from the user, but we did not have the time to implement it. Both the properties department and the wokring_hours are realized with a enum, so that the user can only choose from a predefined set of values. The explanation on how we implemented all the classes can be found in the section <a href="#backend-development">Backend Development</a>.</p>
 </section>
-<section id="development-1" class="level3" data-number="4.2.2">
-<h3 data-number="4.2.2" class="anchored" data-anchor-id="development-1"><span class="header-section-number">4.2.2</span> Development</h3>
-<p>Since we are making request to GPT-4, we decided to use Python for the backend and used <a href="https://flask.palletsprojects.com/en/2.0.x/">Flask</a> to create the API for our frontend. Our databases are setup in a docker container and we used two different types: a relational database and a document database. For the relational database we used <a href="https://www.mysql.com/">MySQL</a> and for the document database we used <a href="https://www.mongodb.com/">MongoDB</a>.</p>
+<section id="entity-relationship-diagram" class="level4" data-number="4.2.1.2">
+<h4 data-number="4.2.1.2" class="anchored" data-anchor-id="entity-relationship-diagram"><span class="header-section-number">4.2.1.2</span> Entity Relationship Diagram</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/entity_relationship_diagram.png"><img src="./images/entity_relationship_diagram.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Entity Relationship Diagram containing all the tables of the relational database</figcaption>
+</figure>
+</div>
+<p>The Entity Relationship Diagram shows all the tables of our relational database. We added a additional table for the evaluation, just to keep track of how good the rating of the applicant was. Other than that we are not using the data of the evaluation table in the application itself. More information on how we implemented the relational database can be found in the section <a href="#backend-development">Backend Development</a>.</p>
+<p>As mentioned earlier we are using both a relational database and a document database. The reason for that is, that we are also dealing with documents besides the objects, which are shown in the class diagram. Each vacancy pdf, which is uploaded by a user is getting stored inside the document database. This has the advantage, that both storing and retrieval is more efficient with a document database than with a relational database, since we are dealing with larger files. How we implemented the document database is explained in the section <a href="#backend-development">Backend Development</a> .</p>
+</section>
+</section>
+<section id="backend-development" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="backend-development"><span class="header-section-number">4.2.2</span> Backend Development</h3>
+<section id="databases" class="level4" data-number="4.2.2.1">
+<h4 data-number="4.2.2.1" class="anchored" data-anchor-id="databases"><span class="header-section-number">4.2.2.1</span> Databases</h4>
+<p>For the relational database we used <a href="https://www.mysql.com/">MySQL</a> and for the document database we used <a href="https://www.mongodb.com/">MongoDB</a>. We are using <a href="https://www.docker.com/">Docker</a> to run both of these Databases inside Docker containers, which are build with the help of a docker-compose file. The reason for that is, that if there are any changes to the database, we can simply delete the container and rebuild it with the new changes. In addition to that we have initial sql scripts, which are executed when the container is build. This is done to make sure, that the database is always in the same state, no matter on which machine it is running. Another important point is, that both databases can be started, stopped, built and destroyed with a single command. This is very convenient, since we do not have to start and stop each databse manually. Both containers are based on the latest images of the databases, so that we always have the latest version of the database. The docker-compose file can be found <a href="https://github.com/HdM-LLM/backend/blob/main/src/db/docker-compose.yaml">here</a>.</p>
+<p>For working with the realtional database we where using either <a href="https://dbeaver.io/">DBeaver</a> or a <a href="https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-mysql-client2">extension</a> for Visual Studio Code by Weijan Chen. For working with the document database we used <a href="https://www.mongodb.com/products/compass">MongoDB Compass</a>, or also another Visual studio Code <a href="https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode">extension</a>, by MongoDB itself, to get a better overview over the documents and to make sure that the documents are stored correctly.</p>
+<p>Storing data inside the mongodb is different than storing data inside a relational database. In a relational database you have tables, which are connected to each other with foreign keys. In a document database you have collections, which are similar to tables, but you do not have foreign keys. In our case we were using <a href="https://www.mongodb.com/docs/manual/core/gridfs/">GridFS</a> from MongoDB. The reason for that is, in case somebody uploads a large file, which means bigger than 16MB, we can still handle it. The way GridFS works is, that it splits the file into smaller chunks and stores them in a <code>fs.chunks</code> collection. The metadata of the file is stored in the <code>fs.files</code> collection.</p>
+</section>
+<section id="backend-application" class="level4" data-number="4.2.2.2">
+<h4 data-number="4.2.2.2" class="anchored" data-anchor-id="backend-application"><span class="header-section-number">4.2.2.2</span> Backend Application</h4>
+<p>Since we need a API connection to both GPT-4 and to our frontend, we decided to use Python and <a href="https://flask.palletsprojects.com/en/2.0.x/">Flask</a>. We build an API with different endpoints for our frontend. These different endpoints can be found <a href="https://github.com/HdM-LLM/backend/tree/main/src/apis">here</a>. Because of the limited time, we just implemented the CRUD operations we needed. All other operations are specified inside the abstract mapper classes for both databases, so they can be implemented fairly easy. The mapper classes can be found <a href="https://github.com/HdM-LLM/backend/tree/main/src/db/mapper">here</a>.</p>
+<p>Each class shown in the class diagramm above implements both getter and setter methods to set and get properties for each instance. The properties are defined as private, so that they can only be accessed by the getter and setter methods. The reason for that is, that we can make sure, that the properties are only set to valid values. All of the classes can be found <a href="https://github.com/HdM-LLM/backend/tree/main/src/classes">here</a>. The following list shows the operations where we use the GPT-4 API:</p>
+<ul>
+<li>The extraction of personal data from the CV in function <code>get_personal_data_from_cv</code> inside <a href="https://github.com/HdM-LLM/backend/blob/main/src/services/cv_service.py">cv_service.py</a></li>
+<li>The creation of categories and their chips (rather <em>tags</em>, but by accident we went with the term for the corresponding UI element instead) in function <code>assign_chip</code> inside <a href="https://github.com/HdM-LLM/backend/blob/main/src/services/category_service.py">category_service.py</a></li>
+<li>The creation of the vacancy text in function <code>generate_text</code> inside <a href="https://github.com/HdM-LLM/backend/blob/main/src/services/vacancy_service.py">vacancy_service.py</a></li>
+<li>The evaluation inside <a href="https://github.com/HdM-LLM/backend/blob/main/src/services/rating_service.py">rating_service.py</a>, which will be explained more in detail in the evaluation section.</li>
+</ul>
+<p>As mentioned in the beginning of this section we have also implemented a connection to the OpenAI GPT-4 API. Those API calls are stored in different services throughtout the project. The services can be found <a href="https://github.com/HdM-LLM/backend/tree/main/src/services">here</a>.</p>
+<p>The services in general are not only used for API interactions with OpenAI but also for other operations, with different classes. For this reason each class has its own service, which is responsible for the operations of the class.</p>
+<p>We used multiple different python packages to implement the backend. You can find all packages <a href="https://github.com/HdM-LLM/backend/blob/main/requirements.txt">here</a> inside the requirements file.</p>
+<p>All functions inside the the backend repository are documented with the help of the <a href="https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring">autoDocstring extension</a> for Visual Studio Code. This is done to maintain a consistent documentation throughout the project and to make sure that the code is easy to understand for other developers.</p>
 
 
+</section>
 </section>
 </section>
 
@@ -499,7 +540,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© Team 03, 2023</div>   
+    <div class="nav-footer-left">© Team 03, 2023-2024</div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
