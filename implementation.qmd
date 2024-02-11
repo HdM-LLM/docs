@@ -36,11 +36,51 @@ We also created a theme for the website to make sure that we have a consistent l
 
 ## Backend
 
-### Design
+### Backend Design
 
-For designing the backend, we used the Entity Relationship Diagram (ERD) to get a better idea of what we wanted the database to look like and we also used class diagrams to model a raw structure of the backend.
+For designing the backend, we used the Entity Relationship Diagram (ERD) to get a better idea of what we wanted the database to look like and we also used class diagrams to model a raw structure of the backend. In addition to the ERD we figured out, which type of database we should use for what kind of data. 
+
+#### Classdiagram
+
+[![The classdiagram containing all the classes](./images/classdiagramm.png)](./images/classdiagramm.png)
+
+As the class diagram shows all classes interhit the business object, so every instance of every class gets a id and a creation date. The class User could be missleading, since the applicant is not a user in the system per se, but still inherits the fistname and the lastname from the user. The Idea was to also create a Employee class, which would inherit from the user, but we did not have the time to implement it. Both the properties department and the wokring_hours are realized with a enum, so that the user can only choose from a predefined set of values. The explanation on how we implemented all the classes can be found in the section [Backend Development](#backend-development).
+
+#### Entity Relationship Diagram
+
+[![Entity Relationship Diagram containing all the tables of the relational database](./images/entity_relationship_diagram.png)](./images/entity_relationship_diagram.png)
+
+The Entity Relationship Diagram shows all the tables of our relational database. We added a additional table for the evaluation, just to keep track of how good the rating of the applicant was. Other than that we are not using the data of the evaluation table in the application itself. More information on how we implemented the relational database can be found in the section [Backend Development](#backend-development).
+
+As mentioned earlier we are using both a relational database and a document database. The reason for that is, that we are also dealing with documents besides the objects, which are shown in the class diagram. Each vacancy pdf, which is uploaded by a user is getting stored inside the document database. This has the advantage, that both storing and retrieval is more efficient with a document database than with a relational database, since we are dealing with larger files. How we implemented the document database is explained in the section [Backend Development](#backend-development)
+.
+
+### Backend Development {#backend-development}
+
+#### Databases 
+For the relational database we used [MySQL](https://www.mysql.com/) and for the document database we used [MongoDB](https://www.mongodb.com/). We are using [Docker](https://www.docker.com/) to run both of these Databases inside Docker containers, which are build with the help of a docker-compose file. The Reason for that is, that if there are any changes to the database, we can simply delete the container and rebuild it with the new changes. In addition to that we have initial sql scripts, which are executed when the container is build. This is done to make sure, that the database is always in the same state, no matter on which machine it is running. Another important point is, that both databases can be started, stoped, built and destroyed with a single command. This is very convenient, since we do not have to start and stop each databse manually. Both containers are based on the latest images of the databases, so that we always have the latest version of the database. The docker-compose file can be found [here](https://github.com/HdM-LLM/backend/blob/main/src/db/docker-compose.yaml).
+
+For working with the realtional database we where using either [DBeaver](https://dbeaver.io/) or a [extension](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-mysql-client2) for Visual Studio Code by Weijan Chen. For working with the document database we used [MongoDB Compass](https://www.mongodb.com/products/compass), or also another Visual studio Code [extension](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode), by MongoDB itself, to get a better overview over the documents and to make sure that the documents are stored correctly.
+
+Storing data inside the mongodb is different, than storing data inside a relational database. In a relational database you have tables, which are connected to each other with foreign keys. In a document database you have collections, which are similar to tables, but you do not have foreign keys. In our case we where using [GridFS](https://www.mongodb.com/docs/manual/core/gridfs/) from MongoDB. The reason for that is, in case somebody uploads a large file, which means bigger than 16MB, we can still handle it. The way GridFS works is, that it splits the file into smaller chunks and stores them in a `fs.chunks` collection. The metadata of the file is stored in the `fs.files` collection.
+
+#### Backend Application
+
+Since we need a API connection to both GPT-4 and to our frontend, we decided to use Python and [Flask](https://flask.palletsprojects.com/en/2.0.x/). We build a API with different endpoints for our frontend. These different endpoints can be found [here](https://github.com/HdM-LLM/backend/tree/main/src/apis). Because of the limited time, we just implemented the CRUD operations we needed. All other operations are specified inside the abstract mapper classes for both databases, so they can be implemented fairly easy. The mapper classes can be found [here](https://github.com/HdM-LLM/backend/tree/main/src/db/mapper).
+
+Each class shown in the class diagramm above implement both getter and setter methods to set and get properties for each instance. The properties are defined as private, so that they can only be accessed by the getter and setter methods. The reason for that is, that we can make sure, that the properties are only set to valid values. All of the classes can be found [here](https://github.com/HdM-LLM/backend/tree/main/src/classes). The following list shows the operations where we use the GPT-4 API:
+
+* The extraction of personal data from the CV in function `get_personal_data_from_cv` inside [cv_service.py](https://github.com/HdM-LLM/backend/blob/main/src/services/cv_service.py) 
+* The creation of categories and their chips in function `assign_chip` inside [category_service.py](https://github.com/HdM-LLM/backend/blob/main/src/services/category_service.py)
+* The creation of the vacancy text in function `generate_text` inside [vacancy_service.py](https://github.com/HdM-LLM/backend/blob/main/src/services/vacancy_service.py)
+* The evaluation inside [rating_service.py](https://github.com/HdM-LLM/backend/blob/main/src/services/rating_service.py), which will be explained more in detail in the evaluation section.
+
+As mentioned in the beginning of this section we have also implemented a connection to the OpenAI GPT-4 API. Those API calls are stored in different services throughtout the project. The services can be found [here](https://github.com/HdM-LLM/backend/tree/main/src/services). 
+
+The services in general are not only used for API interactions with OpenAI but also for other operations, with different classes. For this reason each class has his own service, which is responsible for the operations of the class.
+
+We used multiple different python packages to implement the backend. You can find all packages [here](https://github.com/HdM-LLM/backend/blob/main/requirements.txt) inside the requirements.txt.
+
+All functions inside the the backend repository is documented with the help of the [autoDocstring extension](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring) for Visual Studio Code. This is done to make sure, that the code is easy to understand and to maintain.
 
 
-### Development
-
-Since we are making request to GPT-4, we decided to use Python for the backend and used [Flask](https://flask.palletsprojects.com/en/2.0.x/) to create the API for our frontend. Our databases are setup in a docker container and we used two different types: a relational database and a document database. For the relational database we used [MySQL](https://www.mysql.com/) and for the document database we used [MongoDB](https://www.mongodb.com/).
