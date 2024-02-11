@@ -1,11 +1,11 @@
 # Use Case
 
-## Large Language Models
+We decided to implement two use cases for this project. The first use case is to let AI rate an applicants' resume. The second use case is to create a new job posting with the help of AI on which applicants can apply. 
 
-Large language models are a new paradigm in NLP. They are trained on large amounts of text data and can be used for a variety of tasks. They are also known as pre-trained language models. The most popular ones are BERT, GPT-2, GPT-3, T5, and XLNet. <span style="color: red;">[Find Sources]</span>
+## Use Case 1: AI Resume Rating
 
-T5: Text-to-Text Transfer Transformer - [HuggingFace](https://www.mysql.com/) & [Paper](https://arxiv.org/pdf/1910.10683.pdf)
+Our main use case is to let AI rate an applicants' resume. The applicant can upload his CV (in PDF format) and the AI will rate the resume based on the vacancy the user applies for. Each vacancy has a set of skills on which the resume will be rated. Each skill has a weight and guidelines for when to rate the skill with zero or ten points. The AI will rate the resume which results in a score which will be display in the user interface. The score will only be visible to the recruiter and not to the applicant. The recruiter can then decide if he wants to proceed with the applicant and invite him for an interview or reject the application. He could also contact the applicant to request additional information or to clarify some points.
 
+## Use Case 2: AI Job Posting
 
-
-## Human Resources (?)
+The second use case is to create a new job posting or vacancy with the help of AI. The recruiter only needs to enter the job title, a description of the job, and the required skills. The AI will then create a job posting based on the input of the recruiter. This vacancy is then displayed within our system among the other vacancies. Now, the recruiter can start receiving applications for the job. The AI will then rate the resumes of the applicants based on the vacancy and the recruiter can decide if the applicant is suitable for the job based on the score.
