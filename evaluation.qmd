@@ -1,0 +1,39 @@
+# Evaluation
+
+Since we are utilizing the large language model in ways where there are no strictly right or wrong answers, we cannot employ the [evals framework](https://github.com/openai/evals) developed and maintained by OpenAI. Instead, we opted for a distinct method of evaluation. We selected an existing job posting from Meta for a Frontend Developer position and had ChatGPT (GPT-3.5) generate approximately 40 applications, which were then manually evaluated. Subsequently, we utilized GPT-4 to have the same 40 applications evaluated. To facilitate a comparison, we employed the same evaluation categories as those used for the manual assessments. These categories are detailed below, alongside guidelines with examples for scores of 0 and 10 points for each category, to make the evaluation process as impartial as possible:
+
+- **Education and Degrees**
+  - 0: No formal education or relevant degree.
+  - 10: Ph.D. in Computer Science, Engineering, Applied Sciences, Mathematics, Physics, or a related field with an exceptional academic record.
+
+- **JavaScript/TypeScript Proficiency**
+  - 0: No knowledge or experience with JavaScript/TypeScript.
+  - 10: Expert in JavaScript/TypeScript, demonstrated by significant contributions to complex front-end systems and extensive experience in architectural design.
+
+- **HTML & CSS Skills**
+  - 0: Limited or no understanding of HTML & CSS.
+  - 10: Mastery of HTML & CSS, with the ability to create efficient and visually appealing user interfaces.
+
+- **Framework Familiarity (e.g., Prototype JS, MooTools, Dojo)**
+  - 0: No experience with any JavaScript or TypeScript frameworks.
+  - 10: Extensive expertise in multiple Object-Oriented JavaScript Frameworks, such as Prototype JS, MooTools, or Dojo, and a proven ability to architect complex front-end systems.
+
+- **Automated Testing for Frontend Code**
+  - 0: No experience in implementing automated testing for frontend code.
+  - 10: Adept at implementing comprehensive automated testing strategies for front-end code, ensuring high performance and reliability.
+
+- **Collaboration and Code Reviews**
+  - 0: Poor collaboration skills and minimal participation in code reviews.
+  - 10: Exceptional collaboration skills, actively contributing to design and code reviews, and effectively incorporating feedback from team members.
+
+- **Teamwork**
+  - 0: Works in isolation, lacks teamwork skills.
+  - 10: Outstanding teamwork, demonstrated by effective interaction with product designers, and contributing to the overall improvement of the engineering team's performance.
+
+Our system conducted evaluations using both GPT-3.5-turbo and GPT-4-1106-preview, identifying a discrepancy in the average scores when compared to manual evaluations: a 2.0 gap for GPT-3.5-turbo and a mere 0.7 difference for GPT-4-1106-preview. The evaluation yielded very promising results, indicating that the AI evaluated the applications in the manner we desired without hallucinations. 
+
+A critical step in our evaluation process involves requiring the model to provide a justification and a quote from the CV for each score. These quotes are then verified by a function within our application to confirm their presence in the CV, effectively preventing model hallucinations.
+
+Furthermore, we implement a new evaluation step wherein the original prompt, along with the model's response including score quotes and justifications, is sent back to the model as a complete package. The task for the model is to self-assess and evaluate how well its response matches the criteria. This self-assessment is currently only stored in our database and serves as an indicator for developers on the accuracy of the evaluation, whether on a general level or for individual CVs.
+
+A potential next step could involve introducing a threshold, prompting the model to revise its own response if the self-assessment falls below this value. This mechanism would not only enhance the quality of AI evaluations further but also increase the system's reliability by introducing an additional layer of verification to ensure the accuracy of the evaluations.

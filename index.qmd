@@ -10,6 +10,8 @@ This documentation is for the *SkillSync* application and covers the following t
 
 - [Implementation](implementation.qmd): This section provides information about the implementation of the application.
 
+- [Evaluation](evaluation.qmd): This section provides information about the evaluation of the application.
+
 - [User Instructions](user_instructions.qmd): This section provides information about how to use the application.
 
 - [Future Road Map](future-road-map.qmd): This section provides information about the future development of the application.

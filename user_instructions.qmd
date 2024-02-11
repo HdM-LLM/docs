@@ -1,37 +1,57 @@
 # User Instructions
 
-Since we are using the large language model in a way, where there are no right or wrong answers, we can't use the the [evals framework](https://github.com/openai/evals) that is developed and maintained by OpenAI. Instead we chose a different method for evaluation. We took an existing job posting from Meta looking for a Frontend Developer, let ChatGPT (GPT-3.5) generate around 40 applications and then manually evaluated them. Afterwards we used GPT-4 to get the same 40 applications evaluated. To be able to compare the results we used the same evaluation categories as we used for the human evaluated applications. These categories are listed below. We also added guidelines wih examples for 0 and 10 points for each category to make the evaluation process as neutral as possible:
+## Vacancy Generation
 
-1. Education and degrees
-   - 0: No formal education or relevant degree
-   - 10: Ph.D. in Computer Science, Engineering, Applied Sciences, Mathematics, Physics, or related field with an exceptional academic record
+### Step 1: Navigate to Inquiries
+- Go to the "Inquiries" page on our platform.
+- At the top of the page, find and click the "Create" button.
+- **Screenshot**: ![User Instruction 1](/images/user_instruction_1.png)
+
+### Step 2: Enter Basic Information
+- You will be directed to a page to enter basic vacancy information. Fill in all fields:
+  - **Job Title**
+  - **Department**
+  - **Tasks and Responsibilities**: Brief points are sufficient as AI will enhance this section later.
+  - **Working Hours**
+  - **Description**
+- **Screenshot**: ![User Instruction 2](/images/user_instruction_2.png)
+
+### Step 3: Skill Selection
+- Proceed to "Select Skills" and choose the necessary skills via checkboxes.
+- To add a new skill, click the "New Skill" button and enter the skill name. The category and guidelines will be auto-generated.
+- **Screenshot**: ![User Instruction 3](/images/user_instruction_3.png)
+
+### Step 4: Assigning Weights to Skills
+- After selecting skills, assign weights to each, crucial for calculating applicant scores.
+- Use "Auto Weight" for equal distribution or manually enter percentages and lock them.
+- **Screenshot**: ![User Instruction 4](/images/user_instruction_4.png)
+
+### Step 5: Final Overview and Vacancy Text Generation
+- Review all selected information and skills.
+- Use "Generate" to create the vacancy text, modifying the prompt if necessary.
+- Click "Save" to store the vacancy.
+- **Screenshot**: ![User Instruction 5](/images/user_instruction_5.png)
+
+## Uploading a New Applicant
+
+### Step 1: Click Upload
+- Click on "Upload" in the navigation bar.
+- Select the vacancy for which you are uploading the CV.
 
 
-2. JavaScript/Typescript Proficiency
-    - 0: No knowledge or experience with JavaScript/Typescript
-    - 10: Expert in JavaScript/Typescript, demonstrated by significant contributions to complex front-end systems and extensive experience in architectural design
+### Step 2: Upload CV
+- Drag and drop your CV as a PDF into the designated window.
+- Click the "Send" button to upload the applicant.
+- **Screenshot**: Insert a screenshot here showing the CV upload interface.
 
+### Step 3: Review Applicant
+- Navigate to "Vacancies" in the navigation bar and select the relevant vacancy.
+- All applicants for the vacancy will be listed; click on "Details" for the new applicant.
+- **Screenshot**: Insert a screenshot here showing the list of applicants and the details button.
 
-3. HTML & CSS Skills
-    -  0: Limited or no understanding of HTML & CSS.
-    -  10: Mastery of HTML & CSS, with the ability to create efficient and visually appealing user interfaces
+### Step 4: Applicant Overview
+- You will see a detailed overview of the applicant, including their total score and scores for individual categories.
+- Justifications for the scores and quotes from the CV supporting these assessments are provided.
+- **Screenshot**: Insert a screenshot here showing the detailed overview of an applicant's scores.
 
-
-4. Framework Familiarity (e.g., Prototype JS, MooTools, Dojo)
-    -  0: No experience with any JavaScript or TypeScript frameworks
-    -  10: Extensive expertise in multiple Object-Oriented JavaScript Frameworks, such as Prototype JS, MooTools, or Dojo, and a proven ability to architect complex front-end systems
-
-
-5. Automated Testing for Frontend Code
-    - 0: No experience in implementing automated testing for frontend code
-    - 10: Adept at implementing comprehensive automated testing strategies for front-end code, ensuring high performance and reliability
-
-
-6. Collaboration and Code Reviews
-    -  0: Poor collaboration skills and minimal participation in code reviews
-    -  10: Exceptional collaboration skills, actively contributing to design and code reviews, and effectively incorporating innovations from team members
-
-
-7. Teamwork
-    -  0: Works in isolation, lacks teamwork skills
-    -  10: Outstanding teamwork, demonstrated by effective interaction with product designers, and contributing to the overall improvement of the engineering team's performance
+These instructions provide a comprehensive guide for users to efficiently generate vacancies and upload new applicants, with visual aids at key steps to ensure clarity and ease of use.

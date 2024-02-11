@@ -32,6 +32,7 @@ book:
     - use_case.qmd
     - design_decisions.qmd
     - implementation.qmd
+    - evaluation.qmd
     - user_instructions.qmd
     - future_road_map.qmd
     - references.qmd
