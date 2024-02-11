@@ -12,8 +12,8 @@ book:
   repo-url: https://github.com/HdM-LLM/docs
   repo-actions: [edit, issue, source]
   open-graph: true
-  image: "/images/logo.png"
-  favicon: "/images/logo.png"
+  image: "/images/logo2.png"
+  favicon: "/images/logo2.png"
   search: true
   page-footer:
     left: |
