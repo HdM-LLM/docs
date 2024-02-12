@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "SkillSync",
     "section": "",
-    "text": "Overview\nThis documentation is for the SkillSync application and covers the following topics:\n\nIntroduction: This section provides information about the purpose, scope, and objectives of the application.\nUse Case: This section provides a detailed description of the application’s use case.\nDesign Decisions: This section provides information about the design decisions made during the development of the application.\nImplementation: This section provides information about the implementation of the application.\nUser Instructions: This section provides information about how to use the application.\nFuture Road Map: This section provides information about the future development of the application.",
+    "text": "Overview\nThis documentation is for the SkillSync application and covers the following topics:\n\nIntroduction: This section provides information about the purpose, scope, and objectives of the application.\nUse Case: This section provides a detailed description of the application’s use case.\nDesign Decisions: This section provides information about the design decisions made during the development of the application.\nImplementation: This section provides information about the implementation of the application.\nEvaluation: This section provides information about the evaluation of the application.\nUser Instructions: This section provides information about how to use the application.\nFuture Road Map: This section provides information about the future development of the application.",
     "crumbs": [
       "Overview"
     ]
@@ -100,6 +100,26 @@
     ]
   },
   {
+    "objectID": "design_decisions.html#openai-api-integration-and-gpt-settings",
+    "href": "design_decisions.html#openai-api-integration-and-gpt-settings",
+    "title": "3  Design Decisions",
+    "section": "5.1 OpenAI API Integration and GPT Settings",
+    "text": "5.1 OpenAI API Integration and GPT Settings\nThe application utilizes OpenAI’s API, specifically the gpt-4-1106-preview model, to facilitate various tasks such as rating analysis, job vacancy creation, CV evaluation, and skill assessment. The integration of OpenAI’s API is central to the application’s functionality, with tailored GPT settings enhancing the utility and accuracy of AI-generated content. These settings are meticulously calibrated to align the AI’s output with the application’s quality standards and operational requirements, ensuring the generation of accurate, relevant, and useful content.\n\n5.1.1 Tailored GPT Settings for Enhanced Accuracy\n\nLow Temperature for Predictability A pivotal adjustment in the GPT settings is the use of a low temperature parameter, critical for minimizing the AI’s inclination towards creativity and significantly reducing the risk of generating hallucinated or irrelevant content.\nContextual Role Setting Through System Messages System messages define the context within which the GPT model operates, specifying roles such as a “critical Human Resources professional” to guide the model in tailoring its responses. This role-based prompting helps in generating content that is not only relevant but also specifically tailored to the application’s use case, ensuring the tone and substance of the AI’s output accurately reflect its assigned role.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Design Decisions</span>"
+    ]
+  },
+  {
+    "objectID": "design_decisions.html#advanced-prompting-techniques-in-application-design",
+    "href": "design_decisions.html#advanced-prompting-techniques-in-application-design",
+    "title": "3  Design Decisions",
+    "section": "5.2 Advanced Prompting Techniques in Application Design",
+    "text": "5.2 Advanced Prompting Techniques in Application Design\nWe’ve molded our application’s design around OpenAI’s best practices for prompt engineering, strategically advancing our AI content generation capabilities. These best practices guide the development of our prompts, ensuring they are effectively structured to elicit the desired AI responses.\n\n5.2.1 Prompt Engineering Principles\n\nClear and Structured Input: Each prompt is designed to be clear and direct, structured to elicit specific types of responses, ensuring standardized data handling and consistency across functionalities.\nGuided Responses with Context: Detailed guidelines and templates provide context, guiding the AI towards generating the desired output for tasks such as rating analysis and job vacancy creation.\nDecomposing Complex Tasks: Complex tasks are broken down into simpler components, improving model accuracy and manageability, mirroring best practices in software engineering.\nIncorporating Feedback Loops: The design includes feedback loops for iterative refinement based on the AI’s performance, enabling continuous improvement in content quality and relevance.\nDynamic Prompt Adjustments: Prompts are dynamically adjusted based on the task, optimizing the AI’s understanding and output accuracy through conditional prompting.\nSystematic Testing: A rigorous approach to testing evaluates and enhances the performance of the AI’s responses, ensuring modifications improve the overall quality and reliability.\nUse of Anchoring and Constraints: Clear boundaries and expectations are set for the AI’s responses, guiding the AI towards generating structured, focused outputs and minimizing the risk of off-topic responses.\n\nThis strategic use of prompt engineering principles, inspired by OpenAI’s guidelines, ensures our application’s interactions with the gpt-4-1106-preview model are both effective and efficient, maximizing the utility and quality of AI-generated content.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Design Decisions</span>"
+    ]
+  },
+  {
     "objectID": "implementation.html",
     "href": "implementation.html",
     "title": "4  Implementation",
@@ -130,23 +150,53 @@
     ]
   },
   {
+    "objectID": "evaluation.html",
+    "href": "evaluation.html",
+    "title": "5  Evaluation",
+    "section": "",
+    "text": "Since we are utilizing the large language model in ways where there are no strictly right or wrong answers, we cannot employ the evals framework developed and maintained by OpenAI. Instead, we opted for a distinct method of evaluation. We selected an existing job posting from Meta for a Frontend Developer position and had ChatGPT (GPT-3.5) generate approximately 40 applications, which were then manually evaluated. Subsequently, we utilized GPT-4 to have the same 40 applications evaluated. To facilitate a comparison, we employed the same evaluation categories as those used for the manual assessments. These categories are detailed below, alongside guidelines with examples for scores of 0 and 10 points for each category, to make the evaluation process as impartial as possible:\n\nEducation and Degrees\n\n0: No formal education or relevant degree.\n10: Ph.D. in Computer Science, Engineering, Applied Sciences, Mathematics, Physics, or a related field with an exceptional academic record.\n\nJavaScript/TypeScript Proficiency\n\n0: No knowledge or experience with JavaScript/TypeScript.\n10: Expert in JavaScript/TypeScript, demonstrated by significant contributions to complex front-end systems and extensive experience in architectural design.\n\nHTML & CSS Skills\n\n0: Limited or no understanding of HTML & CSS.\n10: Mastery of HTML & CSS, with the ability to create efficient and visually appealing user interfaces.\n\nFramework Familiarity (e.g., Prototype JS, MooTools, Dojo)\n\n0: No experience with any JavaScript or TypeScript frameworks.\n10: Extensive expertise in multiple Object-Oriented JavaScript Frameworks, such as Prototype JS, MooTools, or Dojo, and a proven ability to architect complex front-end systems.\n\nAutomated Testing for Frontend Code\n\n0: No experience in implementing automated testing for frontend code.\n10: Adept at implementing comprehensive automated testing strategies for front-end code, ensuring high performance and reliability.\n\nCollaboration and Code Reviews\n\n0: Poor collaboration skills and minimal participation in code reviews.\n10: Exceptional collaboration skills, actively contributing to design and code reviews, and effectively incorporating feedback from team members.\n\nTeamwork\n\n0: Works in isolation, lacks teamwork skills.\n10: Outstanding teamwork, demonstrated by effective interaction with product designers, and contributing to the overall improvement of the engineering team’s performance.\n\n\nOur system conducted evaluations using both GPT-3.5-turbo and GPT-4-1106-preview, identifying a discrepancy in the average scores when compared to manual evaluations: a 2.0 gap for GPT-3.5-turbo and a mere 0.7 difference for GPT-4-1106-preview. The evaluation yielded very promising results, indicating that the AI evaluated the applications in the manner we desired without hallucinations.\nA critical step in our evaluation process involves requiring the model to provide a justification and a quote from the CV for each score. These quotes are then verified by a function within our application to confirm their presence in the CV, effectively preventing model hallucinations.\nFurthermore, we implement a new evaluation step wherein the original prompt, along with the model’s response including score quotes and justifications, is sent back to the model as a complete package. The task for the model is to self-assess and evaluate how well its response matches the criteria. This self-assessment is currently only stored in our database and serves as an indicator for developers on the accuracy of the evaluation, whether on a general level or for individual CVs.\nA potential next step could involve introducing a threshold, prompting the model to revise its own response if the self-assessment falls below this value. This mechanism would not only enhance the quality of AI evaluations further but also increase the system’s reliability by introducing an additional layer of verification to ensure the accuracy of the evaluations.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Evaluation</span>"
+    ]
+  },
+  {
     "objectID": "user_instructions.html",
     "href": "user_instructions.html",
-    "title": "5  User Instructions",
+    "title": "6  User Instructions",
     "section": "",
-    "text": "Since we are using the large language model in a way, where there are no right or wrong answers, we can’t use the the evals framework that is developed and maintained by OpenAI. Instead we chose a different method for evaluation. We took an existing job posting from Meta looking for a Frontend Developer, let ChatGPT (GPT-3.5) generate around 40 applications and then manually evaluated them. Afterwards we used GPT-4 to get the same 40 applications evaluated. To be able to compare the results we used the same evaluation categories as we used for the human evaluated applications. These categories are listed below. We also added guidelines wih examples for 0 and 10 points for each category to make the evaluation process as neutral as possible:\n\nEducation and degrees\n\n0: No formal education or relevant degree\n10: Ph.D. in Computer Science, Engineering, Applied Sciences, Mathematics, Physics, or related field with an exceptional academic record\n\nJavaScript/Typescript Proficiency\n\n0: No knowledge or experience with JavaScript/Typescript\n10: Expert in JavaScript/Typescript, demonstrated by significant contributions to complex front-end systems and extensive experience in architectural design\n\nHTML & CSS Skills\n\n0: Limited or no understanding of HTML & CSS.\n10: Mastery of HTML & CSS, with the ability to create efficient and visually appealing user interfaces\n\nFramework Familiarity (e.g., Prototype JS, MooTools, Dojo)\n\n0: No experience with any JavaScript or TypeScript frameworks\n10: Extensive expertise in multiple Object-Oriented JavaScript Frameworks, such as Prototype JS, MooTools, or Dojo, and a proven ability to architect complex front-end systems\n\nAutomated Testing for Frontend Code\n\n0: No experience in implementing automated testing for frontend code\n10: Adept at implementing comprehensive automated testing strategies for front-end code, ensuring high performance and reliability\n\nCollaboration and Code Reviews\n\n0: Poor collaboration skills and minimal participation in code reviews\n10: Exceptional collaboration skills, actively contributing to design and code reviews, and effectively incorporating innovations from team members\n\nTeamwork\n\n0: Works in isolation, lacks teamwork skills\n10: Outstanding teamwork, demonstrated by effective interaction with product designers, and contributing to the overall improvement of the engineering team’s performance",
+    "text": "6.1 Vacancy Generation",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>User Instructions</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>User Instructions</span>"
+    ]
+  },
+  {
+    "objectID": "user_instructions.html#vacancy-generation",
+    "href": "user_instructions.html#vacancy-generation",
+    "title": "6  User Instructions",
+    "section": "",
+    "text": "6.1.1 Step 1: Navigate to Inquiries\n\nGo to the “Inquiries” page on our platform.\nAt the top of the page, find and click the “Create” button.\nScreenshot: \n\n\n\n6.1.2 Step 2: Enter Basic Information\n\nYou will be directed to a page to enter basic vacancy information. Fill in all fields:\n\nJob Title\nDepartment\nTasks and Responsibilities: Brief points are sufficient as AI will enhance this section later.\nWorking Hours\nDescription\n\nScreenshot: \n\n\n\n6.1.3 Step 3: Skill Selection\n\nProceed to “Select Skills” and choose the necessary skills via checkboxes.\nTo add a new skill, click the “New Skill” button and enter the skill name. The category and guidelines will be auto-generated.\nScreenshot: \n\n\n\n6.1.4 Step 4: Assigning Weights to Skills\n\nAfter selecting skills, assign weights to each, crucial for calculating applicant scores.\nUse “Auto Weight” for equal distribution or manually enter percentages and lock them.\nScreenshot: \n\n\n\n6.1.5 Step 5: Final Overview and Vacancy Text Generation\n\nReview all selected information and skills.\nUse “Generate” to create the vacancy text, modifying the prompt if necessary.\nClick “Save” to store the vacancy.\nScreenshot:",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>User Instructions</span>"
+    ]
+  },
+  {
+    "objectID": "user_instructions.html#uploading-a-new-applicant",
+    "href": "user_instructions.html#uploading-a-new-applicant",
+    "title": "6  User Instructions",
+    "section": "6.2 Uploading a New Applicant",
+    "text": "6.2 Uploading a New Applicant\n\n6.2.1 Step 1: Click Upload\n\nClick on “Upload” in the navigation bar.\nSelect the vacancy for which you are uploading the CV.\n\n\n\n6.2.2 Step 2: Upload CV\n\nDrag and drop your CV as a PDF into the designated window.\nClick the “Send” button to upload the applicant.\nScreenshot: \n\n\n\n6.2.3 Step 3: Review Applicant\n\nNavigate to “Vacancies” in the navigation bar and select the relevant vacancy.\nAll applicants for the vacancy will be listed; click on “Details” for the new applicant.\nScreenshot: \n\n\n\n6.2.4 Step 4: Applicant Overview\n\nYou will see a detailed overview of the applicant, including their total score and scores for individual categories.\nJustifications for the scores and quotes from the CV supporting these assessments are provided.\nScreenshot:",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>User Instructions</span>"
     ]
   },
   {
     "objectID": "future_road_map.html",
     "href": "future_road_map.html",
-    "title": "6  Future Road Map",
+    "title": "7  Future Road Map",
     "section": "",
     "text": "In the current state, there are a few things that should be improved or added to the project before it can be considered as a complete solution. Here are some of the ideas:\n\nbla bla bla",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Future Road Map</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Future Road Map</span>"
     ]
   }
 ]

@@ -149,14 +149,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./evaluation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Evaluation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./user_instructions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">User Instructions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">User Instructions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./future_road_map.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Future Road Map</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Future Road Map</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -183,6 +189,17 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#create-a-new-vacancy" id="toc-create-a-new-vacancy" class="nav-link" data-scroll-target="#create-a-new-vacancy"><span class="header-section-number">4.1</span> Create a new vacancy</a></li>
   <li><a href="#manage-applications" id="toc-manage-applications" class="nav-link" data-scroll-target="#manage-applications"><span class="header-section-number">4.2</span> Manage applications</a></li>
   <li><a href="#manage-applicants" id="toc-manage-applicants" class="nav-link" data-scroll-target="#manage-applicants"><span class="header-section-number">4.3</span> Manage applicants</a></li>
+  </ul></li>
+  <li><a href="#design-decisions-prompting" id="toc-design-decisions-prompting" class="nav-link" data-scroll-target="#design-decisions-prompting"><span class="header-section-number">5</span> Design Decisions: Prompting</a>
+  <ul class="collapse">
+  <li><a href="#openai-api-integration-and-gpt-settings" id="toc-openai-api-integration-and-gpt-settings" class="nav-link" data-scroll-target="#openai-api-integration-and-gpt-settings"><span class="header-section-number">5.1</span> OpenAI API Integration and GPT Settings</a>
+  <ul class="collapse">
+  <li><a href="#tailored-gpt-settings-for-enhanced-accuracy" id="toc-tailored-gpt-settings-for-enhanced-accuracy" class="nav-link" data-scroll-target="#tailored-gpt-settings-for-enhanced-accuracy"><span class="header-section-number">5.1.1</span> Tailored GPT Settings for Enhanced Accuracy</a></li>
+  </ul></li>
+  <li><a href="#advanced-prompting-techniques-in-application-design" id="toc-advanced-prompting-techniques-in-application-design" class="nav-link" data-scroll-target="#advanced-prompting-techniques-in-application-design"><span class="header-section-number">5.2</span> Advanced Prompting Techniques in Application Design</a>
+  <ul class="collapse">
+  <li><a href="#prompt-engineering-principles" id="toc-prompt-engineering-principles" class="nav-link" data-scroll-target="#prompt-engineering-principles"><span class="header-section-number">5.2.1</span> Prompt Engineering Principles</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/HdM-LLM/docs/edit/main/design_decisions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/HdM-LLM/docs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/HdM-LLM/docs/blob/main/design_decisions.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
@@ -263,8 +280,39 @@ ul.task-list li input[type="checkbox"] {
 <li>Filter applicants</li>
 <li>View applications of an applicant</li>
 </ul>
+</section>
+</section>
+<section id="design-decisions-prompting" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Design Decisions: Prompting</h1>
+<section id="openai-api-integration-and-gpt-settings" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="openai-api-integration-and-gpt-settings"><span class="header-section-number">5.1</span> OpenAI API Integration and GPT Settings</h2>
+<p>The application utilizes OpenAI’s API, specifically the <code>gpt-4-1106-preview</code> model, to facilitate various tasks such as rating analysis, job vacancy creation, CV evaluation, and skill assessment. The integration of OpenAI’s API is central to the application’s functionality, with tailored GPT settings enhancing the utility and accuracy of AI-generated content. These settings are meticulously calibrated to align the AI’s output with the application’s quality standards and operational requirements, ensuring the generation of accurate, relevant, and useful content.</p>
+<section id="tailored-gpt-settings-for-enhanced-accuracy" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="tailored-gpt-settings-for-enhanced-accuracy"><span class="header-section-number">5.1.1</span> Tailored GPT Settings for Enhanced Accuracy</h3>
+<ul>
+<li><p><strong>Low Temperature for Predictability</strong> A pivotal adjustment in the GPT settings is the use of a low temperature parameter, critical for minimizing the AI’s inclination towards creativity and significantly reducing the risk of generating hallucinated or irrelevant content.</p></li>
+<li><p><strong>Contextual Role Setting Through System Messages</strong> System messages define the context within which the GPT model operates, specifying roles such as a “critical Human Resources professional” to guide the model in tailoring its responses. This role-based prompting helps in generating content that is not only relevant but also specifically tailored to the application’s use case, ensuring the tone and substance of the AI’s output accurately reflect its assigned role.</p></li>
+</ul>
+</section>
+</section>
+<section id="advanced-prompting-techniques-in-application-design" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="advanced-prompting-techniques-in-application-design"><span class="header-section-number">5.2</span> Advanced Prompting Techniques in Application Design</h2>
+<p>We’ve molded our application’s design around <a href="https://platform.openai.com/docs/guides/prompt-engineering">OpenAI’s best practices for prompt engineering</a>, strategically advancing our AI content generation capabilities. These best practices guide the development of our prompts, ensuring they are effectively structured to elicit the desired AI responses.</p>
+<section id="prompt-engineering-principles" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="prompt-engineering-principles"><span class="header-section-number">5.2.1</span> Prompt Engineering Principles</h3>
+<ul>
+<li><p><strong>Clear and Structured Input</strong>: Each prompt is designed to be clear and direct, structured to elicit specific types of responses, ensuring standardized data handling and consistency across functionalities.</p></li>
+<li><p><strong>Guided Responses with Context</strong>: Detailed guidelines and templates provide context, guiding the AI towards generating the desired output for tasks such as rating analysis and job vacancy creation.</p></li>
+<li><p><strong>Decomposing Complex Tasks</strong>: Complex tasks are broken down into simpler components, improving model accuracy and manageability, mirroring best practices in software engineering.</p></li>
+<li><p><strong>Incorporating Feedback Loops</strong>: The design includes feedback loops for iterative refinement based on the AI’s performance, enabling continuous improvement in content quality and relevance.</p></li>
+<li><p><strong>Dynamic Prompt Adjustments</strong>: Prompts are dynamically adjusted based on the task, optimizing the AI’s understanding and output accuracy through conditional prompting.</p></li>
+<li><p><strong>Systematic Testing</strong>: A rigorous approach to testing evaluates and enhances the performance of the AI’s responses, ensuring modifications improve the overall quality and reliability.</p></li>
+<li><p><strong>Use of Anchoring and Constraints</strong>: Clear boundaries and expectations are set for the AI’s responses, guiding the AI towards generating structured, focused outputs and minimizing the risk of off-topic responses.</p></li>
+</ul>
+<p>This strategic use of prompt engineering principles, inspired by OpenAI’s guidelines, ensures our application’s interactions with the <code>gpt-4-1106-preview</code> model are both effective and efficient, maximizing the utility and quality of AI-generated content.</p>
 
 
+</section>
 </section>
 </section>
 
