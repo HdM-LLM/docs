@@ -53,3 +53,38 @@ An employee in HR of the company should be able to manage applicants. This inclu
 - Filter applicants
 - View applications of an applicant
 
+# Design Decisions: Prompting
+
+## OpenAI API Integration and GPT Settings
+
+The application utilizes OpenAI's API, specifically the `gpt-4-1106-preview` model, to facilitate various tasks such as rating analysis, job vacancy creation, CV evaluation, and skill assessment. The integration of OpenAI's API is central to the application's functionality, with tailored GPT settings enhancing the utility and accuracy of AI-generated content. These settings are meticulously calibrated to align the AI's output with the application's quality standards and operational requirements, ensuring the generation of accurate, relevant, and useful content.
+
+### Tailored GPT Settings for Enhanced Accuracy
+
+- **Low Temperature for Predictability**
+A pivotal adjustment in the GPT settings is the use of a low temperature parameter, critical for minimizing the AI's inclination towards creativity and significantly reducing the risk of generating hallucinated or irrelevant content.
+
+- **Contextual Role Setting Through System Messages**
+System messages define the context within which the GPT model operates, specifying roles such as a "critical Human Resources professional" to guide the model in tailoring its responses. This role-based prompting helps in generating content that is not only relevant but also specifically tailored to the application's use case, ensuring the tone and substance of the AI's output accurately reflect its assigned role.
+
+## Advanced Prompting Techniques in Application Design
+
+We've molded our application's design around [OpenAI's best practices for prompt engineering](https://platform.openai.com/docs/guides/prompt-engineering), strategically advancing our AI content generation capabilities. These best practices guide the development of our prompts, ensuring they are effectively structured to elicit the desired AI responses.
+
+### Prompt Engineering Principles
+
+- **Clear and Structured Input**: Each prompt is designed to be clear and direct, structured to elicit specific types of responses, ensuring standardized data handling and consistency across functionalities.
+
+- **Guided Responses with Context**: Detailed guidelines and templates provide context, guiding the AI towards generating the desired output for tasks such as rating analysis and job vacancy creation.
+
+- **Decomposing Complex Tasks**: Complex tasks are broken down into simpler components, improving model accuracy and manageability, mirroring best practices in software engineering.
+
+- **Incorporating Feedback Loops**: The design includes feedback loops for iterative refinement based on the AI's performance, enabling continuous improvement in content quality and relevance.
+
+- **Dynamic Prompt Adjustments**: Prompts are dynamically adjusted based on the task, optimizing the AI's understanding and output accuracy through conditional prompting.
+
+- **Systematic Testing**: A rigorous approach to testing evaluates and enhances the performance of the AI's responses, ensuring modifications improve the overall quality and reliability.
+
+- **Use of Anchoring and Constraints**: Clear boundaries and expectations are set for the AI's responses, guiding the AI towards generating structured, focused outputs and minimizing the risk of off-topic responses.
+
+This strategic use of prompt engineering principles, inspired by OpenAI's guidelines, ensures our application's interactions with the `gpt-4-1106-preview` model are both effective and efficient, maximizing the utility and quality of AI-generated content.
