@@ -31,6 +31,7 @@ Since we are utilizing the large language model in ways where there are no stric
   - 10: Outstanding teamwork, demonstrated by effective interaction with product designers, and contributing to the overall improvement of the engineering team's performance.
 
 Our system conducted evaluations using both GPT-3.5-turbo and GPT-4-1106-preview, identifying a discrepancy in the average scores when compared to manual evaluations: a 2.0 gap for GPT-3.5-turbo and a mere 0.7 difference for GPT-4-1106-preview. The evaluation yielded very promising results, indicating that the AI evaluated the applications in the manner we desired without hallucinations. 
+<span style="color:red;">TODO: Trap of averages irgendwie erwähnen, dass wir das natürlich bedacht haben 😇</span>
 
 A critical step in our evaluation process involves requiring the model to provide a justification and a quote from the CV for each score. These quotes are then verified by a function within our application to confirm their presence in the CV, effectively preventing model hallucinations.
 
