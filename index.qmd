@@ -14,5 +14,5 @@ This documentation is for the *SkillSync* application and covers the following t
 
 - [User Instructions](user_instructions.qmd): This section provides information about how to use the application.
 
-- [Future Road Map](future-road-map.qmd): This section provides information about the future development of the application.
+- [Future Road Map](future_road_map.qmd): This section provides information about the future development of the application.
 
