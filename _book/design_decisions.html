@@ -171,25 +171,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#vacancy" id="toc-vacancy" class="nav-link active" data-scroll-target="#vacancy"><span class="header-section-number">3.1</span> Vacancy</a></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">3.2</span> Application</a></li>
-  <li><a href="#applicant" id="toc-applicant" class="nav-link" data-scroll-target="#applicant"><span class="header-section-number">3.3</span> Applicant</a></li>
-  <li><a href="#use-cases" id="toc-use-cases" class="nav-link" data-scroll-target="#use-cases"><span class="header-section-number">4</span> Use Cases</a>
+  <li><a href="#vector-store" id="toc-vector-store" class="nav-link active" data-scroll-target="#vector-store"><span class="header-section-number">3.1</span> Vector Store</a></li>
+  <li><a href="#prompting" id="toc-prompting" class="nav-link" data-scroll-target="#prompting"><span class="header-section-number">3.2</span> Prompting</a>
   <ul class="collapse">
-  <li><a href="#create-a-new-vacancy" id="toc-create-a-new-vacancy" class="nav-link" data-scroll-target="#create-a-new-vacancy"><span class="header-section-number">4.1</span> Create a new vacancy</a></li>
-  <li><a href="#manage-applications" id="toc-manage-applications" class="nav-link" data-scroll-target="#manage-applications"><span class="header-section-number">4.2</span> Manage applications</a></li>
-  <li><a href="#manage-applicants" id="toc-manage-applicants" class="nav-link" data-scroll-target="#manage-applicants"><span class="header-section-number">4.3</span> Manage applicants</a></li>
-  </ul></li>
-  <li><a href="#design-decisions-prompting" id="toc-design-decisions-prompting" class="nav-link" data-scroll-target="#design-decisions-prompting"><span class="header-section-number">5</span> Design Decisions: Prompting</a>
-  <ul class="collapse">
-  <li><a href="#openai-api-integration-and-gpt-settings" id="toc-openai-api-integration-and-gpt-settings" class="nav-link" data-scroll-target="#openai-api-integration-and-gpt-settings"><span class="header-section-number">5.1</span> OpenAI API Integration and GPT Settings</a>
-  <ul class="collapse">
-  <li><a href="#tailored-gpt-settings-for-enhanced-accuracy" id="toc-tailored-gpt-settings-for-enhanced-accuracy" class="nav-link" data-scroll-target="#tailored-gpt-settings-for-enhanced-accuracy"><span class="header-section-number">5.1.1</span> Tailored GPT Settings for Enhanced Accuracy</a></li>
-  </ul></li>
-  <li><a href="#advanced-prompting-techniques-in-application-design" id="toc-advanced-prompting-techniques-in-application-design" class="nav-link" data-scroll-target="#advanced-prompting-techniques-in-application-design"><span class="header-section-number">5.2</span> Advanced Prompting Techniques in Application Design</a>
-  <ul class="collapse">
-  <li><a href="#prompt-engineering-principles" id="toc-prompt-engineering-principles" class="nav-link" data-scroll-target="#prompt-engineering-principles"><span class="header-section-number">5.2.1</span> Prompt Engineering Principles</a></li>
-  </ul></li>
+  <li><a href="#openai-api-integration-and-gpt-settings" id="toc-openai-api-integration-and-gpt-settings" class="nav-link" data-scroll-target="#openai-api-integration-and-gpt-settings"><span class="header-section-number">3.2.1</span> OpenAI API Integration and GPT Settings</a></li>
+  <li><a href="#advanced-prompting-techniques-in-application-design" id="toc-advanced-prompting-techniques-in-application-design" class="nav-link" data-scroll-target="#advanced-prompting-techniques-in-application-design"><span class="header-section-number">3.2.2</span> Advanced Prompting Techniques in Application Design</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/HdM-LLM/docs/edit/main/design_decisions.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/HdM-LLM/docs/issues/new" class="toc-action">Report an issue</a></p><p><a href="https://github.com/HdM-LLM/docs/blob/main/design_decisions.qmd" class="toc-action">View source</a></p></div></div></nav>
@@ -214,80 +200,29 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Our main goal is to create a simple and easy to use tool for human resource employees to manage their incoming applications and to manage the creation of new vacancies. The tool should be able to handle the following tasks:</p>
-<ul>
-<li>Create new vacancies</li>
-<li>Manage vacancies</li>
-<li>Manage applications</li>
-<li>Manage applicants</li>
-</ul>
-<section id="vacancy" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="vacancy"><span class="header-section-number">3.1</span> Vacancy</h2>
-<p>A vacancy or job posting is a description of a job opening. It contains information about the job, such as the job title, the job description, the job qualifications, the job type (full-time, part-time, etc.), the job category (e.g.&nbsp;IT, Marketing, etc.), aswell as the salary.</p>
+<p>Our main goal is to create a simple and easy to use tool for human resource employees to manage their incoming applications and to manage the creation of new vacancies. During the development of the application, several design decisions were made.</p>
+<section id="vector-store" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="vector-store"><span class="header-section-number">3.1</span> Vector Store</h2>
+<p>At the beginning of the project, we decided to use a vector store to store the information about the job vacancies and the applications. We thought that this would be a good way to store the information and to be able to retrieve it quickly. But during the implementation of the application, we realized that the vector store was not the best option for our use case which is why we decided to switch to a relational database. This decision was made because we realized that the relational database would be easier to use and would allow us to store the information in a more structured way. Additionally, we needed to store and retrieve whole documents and the vector store was not the best option for this either. For this purpose, we decided to use a document database.</p>
 </section>
-<section id="application" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="application"><span class="header-section-number">3.2</span> Application</h2>
-<p>An application is a document which generally consists of a cover letter, a cv (curriculum vitae), and other supporting materials. It is used by applicants to apply for a job posting.</p>
-</section>
-<section id="applicant" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="applicant"><span class="header-section-number">3.3</span> Applicant</h2>
-<p>An applicant is a person who applies for a vacancy. An applicant can have multiple applications to different vacancies.</p>
-</section>
-<section id="use-cases" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Use Cases</h1>
-<section id="create-a-new-vacancy" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="create-a-new-vacancy"><span class="header-section-number">4.1</span> Create a new vacancy</h2>
-<p>An employee of the company should be able to create a new job posting. The job posting should contain the following information:</p>
-<ul>
-<li>Job title</li>
-<li>Job description</li>
-<li>Job qualifications</li>
-<li>Job type</li>
-<li>department</li>
-</ul>
-</section>
-<section id="manage-applications" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="manage-applications"><span class="header-section-number">4.2</span> Manage applications</h2>
-<p>An employee in HR of the company should be able to manage applications. This includes the following tasks:</p>
-<ul>
-<li>View applications</li>
-<li>Delete applications</li>
-<li>Update applications</li>
-<li>Create applications</li>
-<li>Filter applications</li>
-</ul>
-</section>
-<section id="manage-applicants" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="manage-applicants"><span class="header-section-number">4.3</span> Manage applicants</h2>
-<p>An employee in HR of the company should be able to manage applicants. This includes the following tasks:</p>
-<ul>
-<li>View applicants</li>
-<li>Delete applicants</li>
-<li>Update applicants</li>
-<li>Create applicants</li>
-<li>Filter applicants</li>
-<li>View applications of an applicant</li>
-</ul>
-</section>
-</section>
-<section id="design-decisions-prompting" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Design Decisions: Prompting</h1>
-<section id="openai-api-integration-and-gpt-settings" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="openai-api-integration-and-gpt-settings"><span class="header-section-number">5.1</span> OpenAI API Integration and GPT Settings</h2>
+<section id="prompting" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="prompting"><span class="header-section-number">3.2</span> Prompting</h2>
+<section id="openai-api-integration-and-gpt-settings" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="openai-api-integration-and-gpt-settings"><span class="header-section-number">3.2.1</span> OpenAI API Integration and GPT Settings</h3>
 <p>The application utilizes OpenAI’s API, specifically the <code>gpt-4-1106-preview</code> model, to facilitate various tasks such as rating analysis, job vacancy creation, CV evaluation, and skill assessment. The integration of OpenAI’s API is central to the application’s functionality, with tailored GPT settings enhancing the utility and accuracy of AI-generated content. These settings are meticulously calibrated to align the AI’s output with the application’s quality standards and operational requirements, ensuring the generation of accurate, relevant, and useful content.</p>
-<section id="tailored-gpt-settings-for-enhanced-accuracy" class="level3" data-number="5.1.1">
-<h3 data-number="5.1.1" class="anchored" data-anchor-id="tailored-gpt-settings-for-enhanced-accuracy"><span class="header-section-number">5.1.1</span> Tailored GPT Settings for Enhanced Accuracy</h3>
+<section id="tailored-gpt-settings-for-enhanced-accuracy" class="level4" data-number="3.2.1.1">
+<h4 data-number="3.2.1.1" class="anchored" data-anchor-id="tailored-gpt-settings-for-enhanced-accuracy"><span class="header-section-number">3.2.1.1</span> Tailored GPT Settings for Enhanced Accuracy</h4>
 <ul>
 <li><p><strong>Low Temperature for Predictability</strong> A pivotal adjustment in the GPT settings is the use of a low temperature parameter, critical for minimizing the AI’s inclination towards creativity and significantly reducing the risk of generating hallucinated or irrelevant content.</p></li>
 <li><p><strong>Contextual Role Setting Through System Messages</strong> System messages define the context within which the GPT model operates, specifying roles such as a “critical Human Resources professional” to guide the model in tailoring its responses. This role-based prompting helps in generating content that is not only relevant but also specifically tailored to the application’s use case, ensuring the tone and substance of the AI’s output accurately reflect its assigned role.</p></li>
 </ul>
 </section>
 </section>
-<section id="advanced-prompting-techniques-in-application-design" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="advanced-prompting-techniques-in-application-design"><span class="header-section-number">5.2</span> Advanced Prompting Techniques in Application Design</h2>
+<section id="advanced-prompting-techniques-in-application-design" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="advanced-prompting-techniques-in-application-design"><span class="header-section-number">3.2.2</span> Advanced Prompting Techniques in Application Design</h3>
 <p>We’ve molded our application’s design around <a href="https://platform.openai.com/docs/guides/prompt-engineering">OpenAI’s best practices for prompt engineering</a>, strategically advancing our AI content generation capabilities. These best practices guide the development of our prompts, ensuring they are effectively structured to elicit the desired AI responses.</p>
-<section id="prompt-engineering-principles" class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="prompt-engineering-principles"><span class="header-section-number">5.2.1</span> Prompt Engineering Principles</h3>
+<section id="prompt-engineering-principles" class="level4" data-number="3.2.2.1">
+<h4 data-number="3.2.2.1" class="anchored" data-anchor-id="prompt-engineering-principles"><span class="header-section-number">3.2.2.1</span> Prompt Engineering Principles</h4>
 <ul>
 <li><p><strong>Clear and Structured Input</strong>: Each prompt is designed to be clear and direct, structured to elicit specific types of responses, ensuring standardized data handling and consistency across functionalities.</p></li>
 <li><p><strong>Guided Responses with Context</strong>: Detailed guidelines and templates provide context, guiding the AI towards generating the desired output for tasks such as rating analysis and job vacancy creation.</p></li>
