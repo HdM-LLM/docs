@@ -177,7 +177,19 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#anonymize-the-data" id="toc-anonymize-the-data" class="nav-link active" data-scroll-target="#anonymize-the-data"><span class="header-section-number">7.1</span> Anonymize the Data</a></li>
+  <li><a href="#manual-score-adjustment" id="toc-manual-score-adjustment" class="nav-link" data-scroll-target="#manual-score-adjustment"><span class="header-section-number">7.2</span> Manual Score Adjustment</a></li>
+  <li><a href="#interview-preparation" id="toc-interview-preparation" class="nav-link" data-scroll-target="#interview-preparation"><span class="header-section-number">7.3</span> Interview Preparation</a></li>
+  <li><a href="#processing-of-cover-letters" id="toc-processing-of-cover-letters" class="nav-link" data-scroll-target="#processing-of-cover-letters"><span class="header-section-number">7.4</span> Processing of cover letters</a></li>
+  <li><a href="#processing-different-cv-formats" id="toc-processing-different-cv-formats" class="nav-link" data-scroll-target="#processing-different-cv-formats"><span class="header-section-number">7.5</span> Processing different CV formats</a></li>
+  <li><a href="#automatic-upload-of-cvs" id="toc-automatic-upload-of-cvs" class="nav-link" data-scroll-target="#automatic-upload-of-cvs"><span class="header-section-number">7.6</span> Automatic Upload of CVs</a></li>
+  <li><a href="#integration-with-datev" id="toc-integration-with-datev" class="nav-link" data-scroll-target="#integration-with-datev"><span class="header-section-number">7.7</span> Integration with DATEV</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/HdM-LLM/docs/edit/main/future_road_map.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/HdM-LLM/docs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/HdM-LLM/docs/blob/main/future_road_map.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -202,11 +214,54 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>In the current state, there are a few things that should be improved or added to the project before it can be considered as a complete solution. Here are some of the ideas:</p>
-<ul>
-<li>bla bla bla</li>
-</ul>
+<section id="anonymize-the-data" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="anonymize-the-data"><span class="header-section-number">7.1</span> Anonymize the Data</h2>
+<p>The current implementation does not anonymize the data. This means that the AI will have access to the applicant’s personal information. This is a privacy concern and should be addressed. The AI should not have access to the applicant’s personal information. The AI should only have access to the applicant’s CV and the vacancy requirements. The personal information should be anonymized before it is passed to the AI. Also the application should be GDPR compliant.</p>
+</section>
+<section id="manual-score-adjustment" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="manual-score-adjustment"><span class="header-section-number">7.2</span> Manual Score Adjustment</h2>
+<p>The current implementation lets the AI rate the applicants CV and based on the vacancy requirements. However, it would be a good idea to let the HR manager adjust the score manually. This way, the HR manager can adjust the score if they feel that the AI has rated the CV incorrectly or after an interview, they can adjust the score based on the interview.</p>
+</section>
+<section id="interview-preparation" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="interview-preparation"><span class="header-section-number">7.3</span> Interview Preparation</h2>
+<p>The current implementation does not include any interview preparation. It would be a good idea to include a feature that would help the HR manager to prepare for the interview. This could include a list of questions that the HR manager can ask the applicant based on the CV and the vacancy requirements. If the vacancy is for a developer, the system could suggest a list of technical questions that the HR manager can ask the applicant or suggest a case study that the HR manager can use to test the applicant’s skills.</p>
+</section>
+<section id="processing-of-cover-letters" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="processing-of-cover-letters"><span class="header-section-number">7.4</span> Processing of cover letters</h2>
+<p>The application currently only processes the CV. However, it would be nice to include a feature that would process the cover letter as well. The cover letter is an important part of the application and can provide valuable information about the applicant. The system should be able to process the cover letter and extract the information from it.</p>
+</section>
+<section id="processing-different-cv-formats" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="processing-different-cv-formats"><span class="header-section-number">7.5</span> Processing different CV formats</h2>
+<p>Sometimes CVs are in different formats. In some templates, skills are visualized as a slider, in others as a bar or a pie chart. The system should be able to process different CV formats and extract the information from them. The following are some examples of different CV formats:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/cv_style.png" class="img-fluid figure-img"></p>
+<figcaption>Language Skills as slider element</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/cv_style2.png" class="img-fluid figure-img"></p>
+<figcaption>Language Skills as dots</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/cv_style3.png" class="img-fluid figure-img"></p>
+<figcaption>Personality Description with bars</figcaption>
+</figure>
+</div>
+</section>
+<section id="automatic-upload-of-cvs" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="automatic-upload-of-cvs"><span class="header-section-number">7.6</span> Automatic Upload of CVs</h2>
+<p>Generally, the idea was to create an application where an applicant would be able to upload their CV. However, the current implementation does not include this feature. The HR manager has to manually upload the CV. It would be a good idea to either include a feature that would allow the applicant to upload their CV directly to the system or to implement a feature that would automatically upload the CV from the company’s email or from a job portal.</p>
+</section>
+<section id="integration-with-datev" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="integration-with-datev"><span class="header-section-number">7.7</span> Integration with DATEV</h2>
+<p>During the development wo received feedback from a recruiter that it would be helpful to have an integration with DATEV. DATEV is used by many companies in Germany for accounting and HR management. It would be beneficial to have an integration with DATEV so that the HR manager can easily import the applicant’s information into DATEV. This would save the HR manager time and reduce the risk of errors when entering the applicant’s information into DATEV manually.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -622,7 +677,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/HdM-LLM/docs/edit/main/future_road_map.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/HdM-LLM/docs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/HdM-LLM/docs/blob/main/future_road_map.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/HdM-LLM/docs/edit/main/future_road_map.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/HdM-LLM/docs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/HdM-LLM/docs/blob/main/future_road_map.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
