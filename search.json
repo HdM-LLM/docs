@@ -44,77 +44,17 @@
     "href": "design_decisions.html",
     "title": "3  Design Decisions",
     "section": "",
-    "text": "3.1 Vacancy\nA vacancy or job posting is a description of a job opening. It contains information about the job, such as the job title, the job description, the job qualifications, the job type (full-time, part-time, etc.), the job category (e.g. IT, Marketing, etc.), aswell as the salary.",
+    "text": "3.1 Vector Store\nAt the beginning of the project, we decided to use a vector store to store the information about the job vacancies and the applications. We thought that this would be a good way to store the information and to be able to retrieve it quickly. But during the implementation of the application, we realized that the vector store was not the best option for our use case which is why we decided to switch to a relational database. This decision was made because we realized that the relational database would be easier to use and would allow us to store the information in a more structured way. Additionally, we needed to store and retrieve whole documents and the vector store was not the best option for this either. For this purpose, we decided to use a document database.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Design Decisions</span>"
     ]
   },
   {
-    "objectID": "design_decisions.html#application",
-    "href": "design_decisions.html#application",
+    "objectID": "design_decisions.html#prompting",
+    "href": "design_decisions.html#prompting",
     "title": "3  Design Decisions",
-    "section": "3.2 Application",
-    "text": "3.2 Application\nAn application is a document which generally consists of a cover letter, a cv (curriculum vitae), and other supporting materials. It is used by applicants to apply for a job posting.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Design Decisions</span>"
-    ]
-  },
-  {
-    "objectID": "design_decisions.html#applicant",
-    "href": "design_decisions.html#applicant",
-    "title": "3  Design Decisions",
-    "section": "3.3 Applicant",
-    "text": "3.3 Applicant\nAn applicant is a person who applies for a vacancy. An applicant can have multiple applications to different vacancies.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Design Decisions</span>"
-    ]
-  },
-  {
-    "objectID": "design_decisions.html#create-a-new-vacancy",
-    "href": "design_decisions.html#create-a-new-vacancy",
-    "title": "3  Design Decisions",
-    "section": "4.1 Create a new vacancy",
-    "text": "4.1 Create a new vacancy\nAn employee of the company should be able to create a new job posting. The job posting should contain the following information:\n\nJob title\nJob description\nJob qualifications\nJob type\ndepartment",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Design Decisions</span>"
-    ]
-  },
-  {
-    "objectID": "design_decisions.html#manage-applications",
-    "href": "design_decisions.html#manage-applications",
-    "title": "3  Design Decisions",
-    "section": "4.2 Manage applications",
-    "text": "4.2 Manage applications\nAn employee in HR of the company should be able to manage applications. This includes the following tasks:\n\nView applications\nDelete applications\nUpdate applications\nCreate applications\nFilter applications",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Design Decisions</span>"
-    ]
-  },
-  {
-    "objectID": "design_decisions.html#manage-applicants",
-    "href": "design_decisions.html#manage-applicants",
-    "title": "3  Design Decisions",
-    "section": "4.3 Manage applicants",
-    "text": "4.3 Manage applicants\nAn employee in HR of the company should be able to manage applicants. This includes the following tasks:\n\nView applicants\nDelete applicants\nUpdate applicants\nCreate applicants\nFilter applicants\nView applications of an applicant",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Design Decisions</span>"
-    ]
-  },
-  {
-    "objectID": "design_decisions.html#openai-api-integration-and-gpt-settings",
-    "href": "design_decisions.html#openai-api-integration-and-gpt-settings",
-    "title": "3  Design Decisions",
-    "section": "5.1 OpenAI API Integration and GPT Settings",
-    "text": "5.1 OpenAI API Integration and GPT Settings\nThe application utilizes OpenAI’s API, specifically the gpt-4-1106-preview model, to facilitate various tasks such as rating analysis, job vacancy creation, CV evaluation, and skill assessment. The integration of OpenAI’s API is central to the application’s functionality, with tailored GPT settings enhancing the utility and accuracy of AI-generated content. These settings are meticulously calibrated to align the AI’s output with the application’s quality standards and operational requirements, ensuring the generation of accurate, relevant, and useful content.\n\n5.1.1 Tailored GPT Settings for Enhanced Accuracy\n\nLow Temperature for Predictability A pivotal adjustment in the GPT settings is the use of a low temperature parameter, critical for minimizing the AI’s inclination towards creativity and significantly reducing the risk of generating hallucinated or irrelevant content.\nContextual Role Setting Through System Messages System messages define the context within which the GPT model operates, specifying roles such as a “critical Human Resources professional” to guide the model in tailoring its responses. This role-based prompting helps in generating content that is not only relevant but also specifically tailored to the application’s use case, ensuring the tone and substance of the AI’s output accurately reflect its assigned role.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Design Decisions</span>"
-    ]
-  },
-  {
-    "objectID": "design_decisions.html#advanced-prompting-techniques-in-application-design",
-    "href": "design_decisions.html#advanced-prompting-techniques-in-application-design",
-    "title": "3  Design Decisions",
-    "section": "5.2 Advanced Prompting Techniques in Application Design",
-    "text": "5.2 Advanced Prompting Techniques in Application Design\nWe’ve molded our application’s design around OpenAI’s best practices for prompt engineering, strategically advancing our AI content generation capabilities. These best practices guide the development of our prompts, ensuring they are effectively structured to elicit the desired AI responses.\n\n5.2.1 Prompt Engineering Principles\n\nClear and Structured Input: Each prompt is designed to be clear and direct, structured to elicit specific types of responses, ensuring standardized data handling and consistency across functionalities.\nGuided Responses with Context: Detailed guidelines and templates provide context, guiding the AI towards generating the desired output for tasks such as rating analysis and job vacancy creation.\nDecomposing Complex Tasks: Complex tasks are broken down into simpler components, improving model accuracy and manageability, mirroring best practices in software engineering.\nIncorporating Feedback Loops: The design includes feedback loops for iterative refinement based on the AI’s performance, enabling continuous improvement in content quality and relevance.\nDynamic Prompt Adjustments: Prompts are dynamically adjusted based on the task, optimizing the AI’s understanding and output accuracy through conditional prompting.\nSystematic Testing: A rigorous approach to testing evaluates and enhances the performance of the AI’s responses, ensuring modifications improve the overall quality and reliability.\nUse of Anchoring and Constraints: Clear boundaries and expectations are set for the AI’s responses, guiding the AI towards generating structured, focused outputs and minimizing the risk of off-topic responses.\n\nThis strategic use of prompt engineering principles, inspired by OpenAI’s guidelines, ensures our application’s interactions with the gpt-4-1106-preview model are both effective and efficient, maximizing the utility and quality of AI-generated content.",
+    "section": "3.2 Prompting",
+    "text": "3.2 Prompting\n\n3.2.1 OpenAI API Integration and GPT Settings\nThe application utilizes OpenAI’s API, specifically the gpt-4-1106-preview model, to facilitate various tasks such as rating analysis, job vacancy creation, CV evaluation, and skill assessment. The integration of OpenAI’s API is central to the application’s functionality, with tailored GPT settings enhancing the utility and accuracy of AI-generated content. These settings are meticulously calibrated to align the AI’s output with the application’s quality standards and operational requirements, ensuring the generation of accurate, relevant, and useful content.\n\n3.2.1.1 Tailored GPT Settings for Enhanced Accuracy\n\nLow Temperature for Predictability A pivotal adjustment in the GPT settings is the use of a low temperature parameter, critical for minimizing the AI’s inclination towards creativity and significantly reducing the risk of generating hallucinated or irrelevant content.\nContextual Role Setting Through System Messages System messages define the context within which the GPT model operates, specifying roles such as a “critical Human Resources professional” to guide the model in tailoring its responses. This role-based prompting helps in generating content that is not only relevant but also specifically tailored to the application’s use case, ensuring the tone and substance of the AI’s output accurately reflect its assigned role.\n\n\n\n\n3.2.2 Advanced Prompting Techniques in Application Design\nWe’ve molded our application’s design around OpenAI’s best practices for prompt engineering, strategically advancing our AI content generation capabilities. These best practices guide the development of our prompts, ensuring they are effectively structured to elicit the desired AI responses.\n\n3.2.2.1 Prompt Engineering Principles\n\nClear and Structured Input: Each prompt is designed to be clear and direct, structured to elicit specific types of responses, ensuring standardized data handling and consistency across functionalities.\nGuided Responses with Context: Detailed guidelines and templates provide context, guiding the AI towards generating the desired output for tasks such as rating analysis and job vacancy creation.\nDecomposing Complex Tasks: Complex tasks are broken down into simpler components, improving model accuracy and manageability, mirroring best practices in software engineering.\nIncorporating Feedback Loops: The design includes feedback loops for iterative refinement based on the AI’s performance, enabling continuous improvement in content quality and relevance.\nDynamic Prompt Adjustments: Prompts are dynamically adjusted based on the task, optimizing the AI’s understanding and output accuracy through conditional prompting.\nSystematic Testing: A rigorous approach to testing evaluates and enhances the performance of the AI’s responses, ensuring modifications improve the overall quality and reliability.\nUse of Anchoring and Constraints: Clear boundaries and expectations are set for the AI’s responses, guiding the AI towards generating structured, focused outputs and minimizing the risk of off-topic responses.\n\nThis strategic use of prompt engineering principles, inspired by OpenAI’s guidelines, ensures our application’s interactions with the gpt-4-1106-preview model are both effective and efficient, maximizing the utility and quality of AI-generated content.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Design Decisions</span>"
     ]
