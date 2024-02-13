@@ -36,4 +36,4 @@ Generally, the idea was to create an application where an applicant would be abl
 
 ## Integration with DATEV
 
-During the development wo received feedback from a recruiter that it would be helpful to have an integration with DATEV. DATEV is used by many companies in Germany for accounting and HR management. It would be beneficial to have an integration with DATEV so that the HR manager can easily import the applicant's information into DATEV. This would save the HR manager time and reduce the risk of errors when entering the applicant's information into DATEV manually.
+During the development we received feedback from a recruiter that it would be helpful to have an integration with DATEV. DATEV is used by many companies in Germany for accounting and HR management. It would be beneficial to have an integration with DATEV so that the HR manager can easily import the applicant's information into DATEV. This would save the HR manager time and reduce the risk of errors when entering the applicant's information into DATEV manually.
