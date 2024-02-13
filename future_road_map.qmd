@@ -2,4 +2,38 @@
 
 In the current state, there are a few things that should be improved or added to the project before it can be considered as a complete solution. Here are some of the ideas:
 
-- bla bla bla
+## Anonymize the Data
+
+The current implementation does not anonymize the data. This means that the AI will have access to the applicant's personal information. This is a privacy concern and should be addressed. The AI should not have access to the applicant's personal information. The AI should only have access to the applicant's CV and the vacancy requirements. The personal information should be anonymized before it is passed to the AI. Also the application should be GDPR compliant.
+
+## Manual Score Adjustment
+
+The current implementation lets the AI rate the applicants CV and based on the vacancy requirements. However, it would be a good idea to let the HR manager adjust the score manually. This way, the HR manager can adjust the score if they feel that the AI has rated the CV incorrectly or after an interview, they can adjust the score based on the interview.
+
+## Interview Preparation
+
+The current implementation does not include any interview preparation. It would be a good idea to include a feature that would help the HR manager to prepare for the interview. This could include a list of questions that the HR manager can ask the applicant based on the CV and the vacancy requirements. If the vacancy is for a developer, the system could suggest a list of technical questions that the HR manager can ask the applicant or suggest a case study that the HR manager can use to test the applicant's skills.
+
+## Processing of cover letters
+
+The application currently only processes the CV. However, it would be nice to include a feature that would process the cover letter as well. The cover letter is an important part of the application and can provide valuable information about the applicant. The system should be able to process the cover letter and extract the information from it.
+
+## Processing different CV formats
+
+Sometimes CVs are in different formats. In some templates, skills are visualized as a slider, in others as a bar or a pie chart. The system should be able to process different CV formats and extract the information from them. The following are some examples of different CV formats:
+
+![Language Skills as slider element](/images/cv_style.png)
+
+![Language Skills as dots](/images/cv_style2.png)
+
+![Personality Description with bars](/images/cv_style3.png)
+
+
+## Automatic Upload of CVs
+
+Generally, the idea was to create an application where an applicant would be able to upload their CV. However, the current implementation does not include this feature. The HR manager has to manually upload the CV. It would be a good idea to either include a feature that would allow the applicant to upload their CV directly to the system or to implement a feature that would automatically upload the CV from the company's email or from a job portal.
+
+
+## Integration with DATEV
+
+During the development wo received feedback from a recruiter that it would be helpful to have an integration with DATEV. DATEV is used by many companies in Germany for accounting and HR management. It would be beneficial to have an integration with DATEV so that the HR manager can easily import the applicant's information into DATEV. This would save the HR manager time and reduce the risk of errors when entering the applicant's information into DATEV manually.
