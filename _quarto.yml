@@ -35,7 +35,6 @@ book:
     - evaluation.qmd
     - user_instructions.qmd
     - future_road_map.qmd
-    - references.qmd
 
 format:
   html:
